@@ -1,7 +1,26 @@
-* {
-	border-box: box-sizing;
-}
+// Bourbon
+@import "bourbon/bourbon";
 
-body {
-	background: gray;
-}
+// Main Variables
+@import "variables";
+
+// Core Bootstrap
+@import 'bootstrap_src/bootstrap';
+
+// Core Theme
+@import "core/main";
+
+// Fonts
+@import "core/fonts";
+
+//Partials
+@import "partials/partials";
+
+//Pages
+@import "pages/pages";
+
+//Custom
+@import "custom";
+
+//Vendor
+@import "vendor/vendor";

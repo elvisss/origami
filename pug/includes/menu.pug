@@ -1,0 +1,20 @@
+nav(class="navbar navbar-expand-md navbar-dark p-0")
+  button(class="ml-auto navbar-toggler",type="button",data-toggle="collapse",data-target="#navbarSupportedContent",aria-controls="navbarSupportedContent",aria-expanded="false",aria-label="Toggle navigation")
+    span(class="navbar-toggler-icon")
+
+  //- <a class="navbar-brand navbar-custom" href="#">Navbar</a>
+
+  div(class="collapse navbar-collapse",id="navbarSupportedContent")
+    ul(class="navbar-nav navbar-custom justify-content-end justify-content-lg-center align-items-center")
+      include ../mixins/menu-item.pug
+      +menu-item('./','')(class="menu-logo")
+        img(src="images/logo.png")
+      +menu-item('#','Nosotros')
+      +menu-item('#','Espacios')
+      +menu-item('#','Servicios')
+      +menu-item('#','Comunidad')
+      +menu-item('#','Eventos')
+      +menu-item('#','Blog')
+      +menu-item('#','Contacto')
+    .d-block.d-md-none
+      | hola
