@@ -2,11 +2,42 @@ footer#main-footer
 	.wrapper-footer
 		.container
 			.row
-				.col-12.col-md-4.d-none.d-md-block
-					| 1
-				.col-12.col-md-4
-					| 1
-				.col-12.col-md-4.d-none.d-md-block
-					| 1
+				.col-12.col-md-3.d-none.d-md-block
+					.nav-footer-logo.d-flex.align-items-center.justify-content-center
+						a(href="#")
+							img(src="images/logo.png")
+				.col-12.col-md-6
+					.d-flex.justify-content-center
+						.list-footer-info
+							.info-detail.info-address
+								.info-content.d-flex.align-items-center
+									p Av. Contralmirante Montero
+										br
+										| Nº 421 Of. 6D – Magdalena del Mar
+							.info-detail.info-phone
+								.info-content.d-flex.align-items-center
+									p
+										a(href="tel:+51968212887") (51) 968 212 887
+							.info-detail.info-mail
+								.info-content.d-flex.align-items-center
+									p
+										a(href="mailto:contacto@origamicowork.com") contacto@origamicowork.com
+							.info-detail.info-web
+								.info-content.d-flex.align-items-center
+									p
+										a(href="http://www.origamicowork.com") origamicowork.com
+				.col-12.col-md-3.d-none.d-md-block
+					.social-content.d-flex.align-items-center.justify-content-center
+						.social-links
+							a.social-link(href="#",target="_blank")
+								i.fa.fa-facebook
+							a.social-link(href="#",target="_blank")
+								i.fa.fa-twitter
+							a.social-link(href="#",target="_blank")
+								i.fa.fa-instagram
+							a.social-link(href="#",target="_blank")
+								i.fa.fa-linkedin
+							a.social-link(href="#",target="_blank")
+								i.fa.fa-google-plus
 
 include ./scripts.pug
