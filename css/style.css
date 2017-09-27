@@ -5693,6 +5693,9 @@ body {
 body, html {
   height: 100%; }
 
+body {
+  overflow-x: hidden; }
+
 h1, h2, h3, h4, h5 {
   margin: 0; }
 
@@ -5742,6 +5745,39 @@ a {
 
 .swiper-button-black.swiper-button-prev {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23000000'%2F%3E%3C%2Fsvg%3E"); }
+
+.form-control.control-transparent {
+  background-color: transparent;
+  border-color: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  color: white;
+  font-family: Antonio, "Helvetica Neue", Arial, sans-serif; }
+  .form-control.control-transparent:focus {
+    outline: 1px solid rgba(255, 255, 255, 0.5); }
+
+select.form-control {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  background-image: url("../images/select-arrow.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  color: white; }
+  select.form-control:focus {
+    color: white; }
+  select.form-control option {
+    color: black; }
+
+.btn.btn-transparent {
+  background-color: transparent;
+  border: 1px solid white;
+  transition: 0.5s;
+  color: white;
+  font-size: 16px;
+  font-family: Antonio, "Helvetica Neue", Arial, sans-serif; }
+  .btn.btn-transparent:hover {
+    background-color: rgba(0, 0, 0, 0.5); }
 
 @font-face {
   src: url("../fonts/Antonio-Regular.ttf") format("truetype");
@@ -5852,6 +5888,11 @@ a {
     text-transform: uppercase;
     padding-left: 1em;
     padding-right: 1em; }
+  .navbar-custom li.nav-item.nav-active a.nav-link {
+    font-size: 22.5px;
+    font-family: AntonioBold, "Helvetica Neue", Arial, sans-serif;
+    padding-top: .189em;
+    padding-bottom: .189em; }
   .navbar-custom li.nav-item.menu-logo {
     margin-bottom: 25px; }
     @media (min-width: 768px) {
@@ -5865,6 +5906,8 @@ a {
         left: 100px; } }
     .navbar-custom li.nav-item.menu-logo a.nav-link {
       padding: 0; }
+  .navbar-custom.navbar-dark li.nav-item a.nav-link {
+    color: black; }
 
 #main-header {
   padding: 0;
@@ -6199,6 +6242,40 @@ a {
         width: 470px;
         height: 400px; } }
 
+#contact-section .bg-contact {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  background-image: url("../images/bg-contact.jpg"); }
+  #contact-section .bg-contact .wrapper-contact {
+    width: 80%;
+    margin: 0 auto; }
+    @media (min-width: 768px) {
+      #contact-section .bg-contact .wrapper-contact {
+        width: 500px; } }
+
+#main-contact {
+  padding: 60px 0 30px; }
+  #main-contact .top-contact {
+    text-align: center; }
+    #main-contact .top-contact h4 {
+      font-size: 25px;
+      font-family: Antonio, "Helvetica Neue", Arial, sans-serif;
+      color: white; }
+  #main-contact .body-contact {
+    margin-top: 60px; }
+    #main-contact .body-contact .form-group {
+      margin-bottom: 1.25rem; }
+  #main-contact .form-control-label {
+    color: white;
+    font-family: Antonio, "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px; }
+  @media (min-width: 768px) {
+    #main-contact {
+      padding: 100px 0 60px; }
+      #main-contact .top-contact h4 {
+        font-size: 36px; } }
+
 #main-slider {
   height: 100%; }
   #main-slider .main-banner-bg {
@@ -6288,7 +6365,6 @@ a {
       padding: 0 70px; } }
   #review-section:before, #review-section:after {
     content: "";
-    background-position: left center;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -6297,10 +6373,12 @@ a {
   @media (min-width: 992px) {
     #review-section:before {
       background-image: url("../images/left-review.png");
-      left: 0; }
+      left: 0;
+      background-position: left center; }
     #review-section:after {
       background-image: url("../images/right-review.png");
-      right: 0; } }
+      right: 0;
+      background-position: right center; } }
   #review-section .wrapper-review {
     height: 150px; }
     @media (min-width: 992px) {
@@ -6330,6 +6408,81 @@ a {
     color: black;
     font-size: 14px;
     font-family: RobotoBold, "Helvetica Neue", Arial, sans-serif; }
+
+#pills-about {
+  height: 100%; }
+  #pills-about .pill-bg {
+    height: 100%;
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat; }
+
+#pills-tab-about {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 50px; }
+  #pills-tab-about .pill-tab {
+    width: 300px;
+    text-align: center; }
+    #pills-tab-about .pill-tab a {
+      padding: .5em 1em;
+      line-height: 27px;
+      font-size: 10px;
+      font-family: AntonioBold, "Helvetica Neue", Arial, sans-serif;
+      color: rgba(0, 0, 0, 0.6);
+      transition: 0.5s; }
+      @media (min-width: 768px) {
+        #pills-tab-about .pill-tab a {
+          font-size: 22.5px; } }
+      #pills-tab-about .pill-tab a.active, #pills-tab-about .pill-tab a:hover {
+        font-size: 27px;
+        color: black; }
+
+.flow-about {
+  width: 100%;
+  padding: 50px 0 50px 80px;
+  position: relative; }
+  @media (min-width: 768px) {
+    .flow-about {
+      width: 70%; } }
+  @media (min-width: 992px) {
+    .flow-about {
+      width: 50%; } }
+  .flow-about:after {
+    content: "";
+    position: absolute;
+    left: -200px;
+    right: -75px;
+    bottom: 0;
+    top: 0;
+    -webkit-transform: skew(-30deg);
+    -moz-transform: skew(-30deg);
+    -ms-transform: skew(-30deg);
+    -o-transform: skew(-30deg);
+    transform: skew(-30deg);
+    background-color: #f5dc00;
+    z-index: 1; }
+  .flow-about .wrapper-flow-about {
+    position: relative;
+    z-index: 2; }
+    .flow-about .wrapper-flow-about:after {
+      content: "";
+      position: absolute;
+      background-image: url("../images/origami.png");
+      background-repeat: no-repeat;
+      background-position: top center;
+      width: 113px;
+      height: 81px;
+      top: 50%;
+      left: 0;
+      margin-top: -40.5px; }
+    .flow-about .wrapper-flow-about .content-flow-about {
+      padding-left: 130px; }
+      .flow-about .wrapper-flow-about .content-flow-about p {
+        font-family: RobotoItalic, "Helvetica Neue", Arial, sans-serif;
+        font-size: 15px;
+        color: black; }
 
 /**
  * Swiper 3.4.2

@@ -7,6 +7,10 @@ body, html {
   height: 100%;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 h1, h2, h3, h4, h5 {
   margin: 0;
 }
@@ -72,5 +76,51 @@ a {
   }
   &.swiper-button-prev {
     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23000000'%2F%3E%3C%2Fsvg%3E");
+  }
+}
+
+.form-control {
+  &.control-transparent {
+    background-color: transparent;
+    border-color: transparent;
+    border-bottom: 1px solid rgba(white, .5);
+    color: white;
+    font-family: $font-family-antonio;
+    &:focus {
+      outline: 1px solid rgba(white, .5);
+    }
+  }
+}
+
+select {
+  &.form-control {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    background-image: url('../images/select-arrow.png');
+    background-repeat: no-repeat;
+    background-position: right center;
+    color: white;
+    &:focus {
+      color: white;
+    }
+    option {
+      color: black;
+    }
+  }
+}
+
+.btn {
+  &.btn-transparent {
+    background-color: transparent;
+    border: 1px solid white;
+    @include transition(.5s);
+    color: white;
+    font-size: 16px;
+    font-family: $font-family-antonio;
+    &:hover {
+      background-color: rgba(0,0,0,.5);
+    }
   }
 }

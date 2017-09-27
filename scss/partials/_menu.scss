@@ -12,6 +12,16 @@
 					padding-right: 1em;
 				}
 			}
+			&.nav-active {
+				a {
+					&.nav-link {
+						font-size: 22.5px;
+						font-family: $font-family-antonio-bold;
+						padding-top: .189em;
+						padding-bottom: .189em;
+					}
+				}
+			}
 			&.menu-logo {
 				margin-bottom: 25px;
 				@include media-breakpoint-up(md) {
@@ -26,6 +36,17 @@
 				a {
 					&.nav-link {
 						padding: 0;
+					}
+				}
+			}
+		}
+	}
+	&.navbar-dark {
+		li {
+			&.nav-item {
+				a {
+					&.nav-link {
+						color: black;
 					}
 				}
 			}

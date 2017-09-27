@@ -186,6 +186,42 @@ html(lang='es')
                 .swiper-button-next.swiper-button-black
                 .swiper-button-prev.swiper-button-black
 
+        section#contact-section.fluid-section
+            .bg-contact
+                .container-fluid
+                    .wrapper-contact
+                        form#main-contact
+                            .top-contact
+                                h4 CONTÁCTANOS
+                            .body-contact
+                                .row
+                                    .form-group.col-md-6
+                                        label.form-control-label(for="form-name") nombre
+                                        input#form-name.form-control.control-transparent(type="text",placeholder="",required="required")
+                                    .form-group.col-md-6
+                                        label.form-control-label(for="form-email") email
+                                        input#form-email.form-control.control-transparent(type="email",placeholder="",required="required")
+                                    .form-group.col-md-6
+                                        label.form-control-label(for="form-what-does") ¿qué hace?
+                                        select#form-what-does.form-control.control-transparent(required="required")
+                                            option 1
+                                            option 2
+                                    .form-group.col-md-6
+                                        label.form-control-label(for="form-for-who") ¿para quién lo hace?
+                                        select#form-for-who.form-control.control-transparent(required="required")
+                                            option 1
+                                            option 2
+                                    .form-group.col-md-6
+                                        label.form-control-label(for="form-business") nombre de la empresa
+                                        input#form-business.form-control.control-transparent(type="text",placeholder="",required="required")
+                                    .form-group.col-md-6
+                                        label.form-control-label(for="form-phone") teléfono
+                                        input#form-phone.form-control.control-transparent(type="tel",placeholder="",required="required")
+                                    .form-group.col-12
+                                        label.form-control-label(for="form-message") mensaje
+                                        textarea#form-message.form-control.control-transparent(rows=4)
+                                    .col-12
+                                        button#form-submit.btn.btn-block.btn-button.btn-transparent(type="submit") ENVIAR
 
         include includes/footer.pug
         script(src="js/index.js",type="text/javascript")

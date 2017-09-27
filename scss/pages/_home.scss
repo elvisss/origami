@@ -104,7 +104,6 @@
 	}
 	&:before, &:after {
 		content: "";
-		background-position: left center;
 		position: absolute;
 		top: 0;
 		bottom: 0;
@@ -115,10 +114,12 @@
 		&:before {
 			background-image: url("../images/left-review.png");
 			left: 0;
+			background-position: left center;
 		}
 		&:after {
 			background-image: url("../images/right-review.png");
 			right: 0;
+			background-position: right center;
 		}
 	}
 	.wrapper-review {
