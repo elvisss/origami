@@ -50,6 +50,11 @@
 	}
 	.nav-footer-logo {
 		height: 100%;
+		a {
+			img, svg {
+				width: 116px;
+			}
+		}
 	}
 	.social-content {
 		height: 100%;

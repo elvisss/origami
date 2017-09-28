@@ -5729,6 +5729,14 @@ a {
   width: 100%;
   position: relative; }
 
+.min-full-section {
+  min-height: 100%;
+  width: 100%;
+  position: relative; }
+  @media (min-width: 768px) {
+    .min-full-section {
+      height: 100%; } }
+
 .fluid-secion {
   height: auto;
   width: 100%;
@@ -5778,6 +5786,32 @@ select.form-control {
   font-family: Antonio, "Helvetica Neue", Arial, sans-serif; }
   .btn.btn-transparent:hover {
     background-color: rgba(0, 0, 0, 0.5); }
+
+.modal-dialog.full-modal {
+  height: auto;
+  margin: 0;
+  padding: 15px;
+  max-width: initial; }
+  @media (min-width: 768px) {
+    .modal-dialog.full-modal {
+      padding: 40px;
+      height: 100%; } }
+  .modal-dialog.full-modal .modal-content {
+    height: 100%; }
+    .modal-dialog.full-modal .modal-content button.close {
+      position: relative;
+      z-index: 2;
+      color: white;
+      opacity: 1;
+      text-shadow: none;
+      font-size: 40px;
+      font-weight: lighter; }
+    .modal-dialog.full-modal .modal-content .modal-full-content {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0; }
 
 @font-face {
   src: url("../fonts/Antonio-Regular.ttf") format("truetype");
@@ -5887,7 +5921,10 @@ select.form-control {
     font-family: AntonioLight, "Helvetica Neue", Arial, sans-serif;
     text-transform: uppercase;
     padding-left: 1em;
-    padding-right: 1em; }
+    padding-right: 1em;
+    color: rgba(255, 255, 255, 0.8); }
+    .navbar-custom li.nav-item a.nav-link img, .navbar-custom li.nav-item a.nav-link svg {
+      width: 116px; }
   .navbar-custom li.nav-item.nav-active a.nav-link {
     font-size: 22.5px;
     font-family: AntonioBold, "Helvetica Neue", Arial, sans-serif;
@@ -5908,6 +5945,8 @@ select.form-control {
       padding: 0; }
   .navbar-custom.navbar-dark li.nav-item a.nav-link {
     color: black; }
+    .navbar-custom.navbar-dark li.nav-item a.nav-link:hover {
+      color: rgba(0, 0, 0, 0.6); }
 
 #main-header {
   padding: 0;
@@ -5972,6 +6011,8 @@ select.form-control {
           text-decoration: underline; }
   #main-footer .nav-footer-logo {
     height: 100%; }
+    #main-footer .nav-footer-logo a img, #main-footer .nav-footer-logo a svg {
+      width: 116px; }
   #main-footer .social-content {
     height: 100%; }
     #main-footer .social-content .social-links {
@@ -6245,8 +6286,9 @@ select.form-control {
 #contact-section .bg-contact {
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top center;
-  background-image: url("../images/bg-contact.jpg"); }
+  background-position: bottom center;
+  background-image: url("../images/bg-contact.jpg");
+  height: 100%; }
   #contact-section .bg-contact .wrapper-contact {
     width: 80%;
     margin: 0 auto; }
@@ -6263,18 +6305,18 @@ select.form-control {
       font-family: Antonio, "Helvetica Neue", Arial, sans-serif;
       color: white; }
   #main-contact .body-contact {
-    margin-top: 60px; }
-    #main-contact .body-contact .form-group {
-      margin-bottom: 1.25rem; }
+    margin-top: 40px; }
   #main-contact .form-control-label {
     color: white;
     font-family: Antonio, "Helvetica Neue", Arial, sans-serif;
-    font-size: 16px; }
+    font-size: 14px; }
   @media (min-width: 768px) {
     #main-contact {
       padding: 100px 0 60px; }
       #main-contact .top-contact h4 {
-        font-size: 36px; } }
+        font-size: 30px; } }
+  #main-contact.full-contact {
+    padding: 60px 0 30px; }
 
 #main-slider {
   height: 100%; }
@@ -6483,6 +6525,129 @@ select.form-control {
         font-family: RobotoItalic, "Helvetica Neue", Arial, sans-serif;
         font-size: 15px;
         color: black; }
+
+.spaces-section {
+  margin-top: 60px;
+  padding: 15px; }
+  @media (min-width: 768px) {
+    .spaces-section {
+      margin-top: 0;
+      padding: 200px 40px 60px; } }
+  .spaces-section .gallery-space {
+    padding: 2.5px; }
+
+.hover-tile-outer {
+  background-position: top;
+  background-size: cover;
+  border: 1px solid gainsboro;
+  cursor: pointer;
+  height: 390px; }
+  .hover-tile-outer .hover-tile-container {
+    height: 390px;
+    overflow: hidden; }
+  .hover-tile-outer .hover-tile-container:hover > .hover-tile {
+    transform: translate(0, -100%); }
+  .hover-tile-outer .hover-tile {
+    background: inherit;
+    color: white;
+    overflow: hidden;
+    height: 100%;
+    transition: all 0.2s ease-in-out; }
+  .hover-tile-outer .hover-tile-hidden {
+    background: rgba(0, 0, 0, 0.8); }
+    .hover-tile-outer .hover-tile-hidden h4 {
+      text-align: center;
+      line-height: 390px;
+      font-family: AntonioBold, "Helvetica Neue", Arial, sans-serif;
+      font-size: 36px;
+      text-transform: uppercase; }
+
+.spaces-slider.swiper-container {
+  width: 100%;
+  height: 240px; }
+  @media (min-width: 768px) {
+    .spaces-slider.swiper-container {
+      height: 100%; } }
+  .spaces-slider.swiper-container:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-image: url("../images/shadow-spaces.png");
+    z-index: 2; }
+
+.spaces-slider .swiper-slide {
+  background: #fff;
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat; }
+
+.spaces-wrapper-content .space-desc {
+  background-color: #f5dc00;
+  height: 40px;
+  text-align: center;
+  z-index: 2; }
+  .spaces-wrapper-content .space-desc h4 {
+    color: #040006;
+    font-size: 18px;
+    line-height: 40px;
+    font-family: AntonioBold, "Helvetica Neue", Arial, sans-serif;
+    letter-spacing: 4px;
+    text-transform: uppercase; }
+  @media (min-width: 768px) {
+    .spaces-wrapper-content .space-desc {
+      position: absolute;
+      bottom: 40px;
+      right: 0;
+      height: 60px;
+      padding: 0 50px; }
+      .spaces-wrapper-content .space-desc h4 {
+        line-height: 60px;
+        font-size: 27px; } }
+
+.spaces-wrapper-content .space-review {
+  background-color: #d8d9dd;
+  padding: 40px 0;
+  z-index: 3; }
+  .spaces-wrapper-content .space-review .space-wrapper-review {
+    width: 80%;
+    margin: 0 auto; }
+    .spaces-wrapper-content .space-review .space-wrapper-review .space-properties .space-property {
+      margin-top: 30px;
+      height: 70px; }
+      .spaces-wrapper-content .space-review .space-wrapper-review .space-properties .space-property:first-child {
+        margin-top: 0; }
+      .spaces-wrapper-content .space-review .space-wrapper-review .space-properties .space-property .property-img {
+        float: left;
+        width: 90px;
+        text-align: center;
+        height: 100%; }
+        .spaces-wrapper-content .space-review .space-wrapper-review .space-properties .space-property .property-img img, .spaces-wrapper-content .space-review .space-wrapper-review .space-properties .space-property .property-img svg {
+          height: 100%; }
+      .spaces-wrapper-content .space-review .space-wrapper-review .space-properties .space-property .property-desc {
+        margin-left: 110px;
+        height: 100%; }
+        .spaces-wrapper-content .space-review .space-wrapper-review .space-properties .space-property .property-desc p {
+          color: white;
+          font-family: Antonio, "Helvetica Neue", Arial, sans-serif;
+          font-size: 13px; }
+  @media (min-width: 768px) {
+    .spaces-wrapper-content .space-review {
+      position: absolute;
+      left: 40px;
+      top: 0;
+      background-color: transparent; }
+      .spaces-wrapper-content .space-review .space-wrapper-review {
+        width: 100%; }
+        .spaces-wrapper-content .space-review .space-wrapper-review .space-properties .space-property {
+          margin-top: 25px; }
+          .spaces-wrapper-content .space-review .space-wrapper-review .space-properties .space-property .property-desc p {
+            font-size: 16px; } }
 
 /**
  * Swiper 3.4.2

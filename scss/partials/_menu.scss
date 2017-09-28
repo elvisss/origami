@@ -10,6 +10,10 @@
 					text-transform: uppercase;
 					padding-left: 1em;
 					padding-right: 1em;
+					color: rgba(white, .8);
+					img, svg {
+						width: 116px;
+					}
 				}
 			}
 			&.nav-active {
@@ -47,6 +51,9 @@
 				a {
 					&.nav-link {
 						color: black;
+						&:hover {
+							color: rgba(black, .6);
+						}
 					}
 				}
 			}

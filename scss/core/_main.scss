@@ -53,6 +53,15 @@ a {
   position: relative;
 }
 
+.min-full-section {
+  min-height: 100%;
+  width: 100%;
+  position: relative;
+  @include media-breakpoint-up(md) {
+    height: 100%;
+  }
+}
+
 .fluid-secion {
   height: auto;
   width: 100%;
@@ -124,3 +133,39 @@ select {
     }
   }
 }
+
+.modal-dialog {
+  &.full-modal {
+    height: auto;
+    margin: 0;
+    padding: 15px;
+    max-width: initial;
+    @include media-breakpoint-up(md) {
+      padding: 40px;
+      height: 100%;
+    }
+    .modal-content {
+      height: 100%;
+      .modal-body {
+
+      }
+      button.close {
+        position: relative;
+        z-index: 2;
+        color: white;
+        opacity: 1;
+        text-shadow: none;
+        font-size: 40px;
+        font-weight: lighter;
+      }
+      .modal-full-content {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+      }
+    }
+  }
+}
+

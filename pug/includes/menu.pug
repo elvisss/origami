@@ -6,13 +6,13 @@ nav(class="navbar navbar-expand-md navbar-dark p-0")
     ul(class="navbar-nav navbar-custom justify-content-end justify-content-lg-center align-items-center")
       include ../mixins/menu-item.pug
       +menu-item('./','')(class="menu-logo")
-        img(src="images/logo.png")
+        include ./logo.pug
       +menu-item('nosotros.html','Nosotros')
-      +menu-item('#','Espacios')
+      +menu-item('espacios.html','Espacios')
       +menu-item('#','Servicios')
       +menu-item('#','Comunidad')
       +menu-item('#','Eventos')
       +menu-item('#','Blog')
-      +menu-item('#','Contacto')
+      +menu-item('contacto.html','Contacto')
     .d-block.d-md-none
       | hola

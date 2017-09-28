@@ -1,4 +1,4 @@
-var swiper = new Swiper('#main-slider', {
+var mainSwiper = new Swiper('#main-slider', {
     paginationClickable: true,
     nextButton: '.swiper-button-next',
     prevButton: '.swiper-button-prev'
@@ -21,7 +21,7 @@ var galleryThumbs = new Swiper('#slider-room-thumbs', {
 galleryTop.params.control = galleryThumbs;
 galleryThumbs.params.control = galleryTop;
 
-var swiper = new Swiper('#comunity-slider', {
+var comunitySwiper = new Swiper('#comunity-slider', {
 	nextButton: '#comunity-section .swiper-button-next',
 	prevButton: '#comunity-section .swiper-button-prev',
     effect: 'coverflow',
