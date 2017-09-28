@@ -6,36 +6,33 @@ html(lang='es')
 
         section#main-section.full-section
 
-            #pills-tab-about.nav.nav-pills.pills-content.d-flex.justify-content-center(role="tablist")
+            #pills-about.tab-content
+                #pills-whoweare.tab-pane.fade.show.active.pill-content(role='tabpanel', aria-labelledby='pills-whoweare-tab')
+                    .pill-bg(style="background-image: url('./images/bg-us1.jpg')")
+                    .flow-about
+                        .wrapper-flow-about
+                            .content-flow-about
+                                p Origami es el espacio de coworking para las personas que quieren intercambiar ideas y están dispuestas a colaborar. Te ofrecemos bellos espacios, cómodos, seguros y dinámicos para atraer tu creatividad.
+                #pills-whatwedo.tab-pane.fade.pill-content(role='tabpanel', aria-labelledby='pills-whatwedo-tab')
+                    .pill-bg(style="background-image: url('./images/bg-us2.jpg')")
+                    .flow-about
+                        .wrapper-flow-about
+                            .content-flow-about
+                                p Colaborar, intercambiar ideas, proyectos, oportunidades y conocimientos, identificándonos con las necesidades de nuestros coworkers, evitando el aislamiento que se produce en los emprendedores que ejercen sus actividades desde sus propias oficinas o casas y promoviendo el crecimiento de cada uno de ellos.
+                #pills-whatwewant.tab-pane.fade.pill-content(role='tabpanel', aria-labelledby='pills-whatwewant-tab')
+                    .pill-bg(style="background-image: url('./images/bg-us3.jpg')")
+                    .flow-about
+                        .wrapper-flow-about
+                            .content-flow-about
+                                p Ser una organización líder de coworking en el Perú, destacando por las conexiones profesionales de creatividad e innovación, tener crecimiento sostenible de nuevos espacios enfocados en dar los mejores servicios a nuestros coworkers.
+
+            #pills-tab-about.nav.nav-pills.pills-content.d-flex.justify-content-around.justify-content-md-center(role="tablist")
                 .pill-tab.nav-item
                     a#pills-whoweare-tab.active(data-toggle="pill", href="#pills-whoweare", role="tab", aria-controls="pills-whoweare") ¿QUIÉNES SOMOS?
                 .pill-tab.nav-item
                     a#pills-whatwedo-tab(data-toggle="pill", href="#pills-whatwedo", role="tab", aria-controls="pills-whatwedo") ¿QUÉ HACEMOS?
                 .pill-tab.nav-item
                     a#pills-whatwewant-tab(data-toggle="pill", href="#pills-whatwewant", role="tab", aria-controls="pills-whatwewant") ¿QUÉ QUEREMOS?
-
-            #pills-about.tab-content
-                #pills-whoweare.tab-pane.fade.show.active.pill-bg(role='tabpanel', aria-labelledby='pills-whoweare-tab', style="background-image: url('./images/bg-us1.jpg')")
-                    .d-table
-                        .d-table-cell
-                            .flow-about
-                                .wrapper-flow-about
-                                    .content-flow-about
-                                        p Origami es el espacio de coworking para las personas que quieren intercambiar ideas y están dispuestas a colaborar. Te ofrecemos bellos espacios, cómodos, seguros y dinámicos para atraer tu creatividad.
-                #pills-whatwedo.tab-pane.fade.pill-bg(role='tabpanel', aria-labelledby='pills-whatwedo-tab', style="background-image: url('./images/bg-us2.jpg')")
-                    .d-table
-                        .d-table-cell
-                            .flow-about
-                                .wrapper-flow-about
-                                    .content-flow-about
-                                        p Colaborar, intercambiar ideas, proyectos, oportunidades y conocimientos, identificándonos con las necesidades de nuestros coworkers, evitando el aislamiento que se produce en los emprendedores que ejercen sus actividades desde sus propias oficinas o casas y promoviendo el crecimiento de cada uno de ellos.
-                #pills-whatwewant.tab-pane.fade.pill-bg(role='tabpanel', aria-labelledby='pills-whatwewant-tab', style="background-image: url('./images/bg-us3.jpg')")
-                    .d-table
-                        .d-table-cell
-                            .flow-about
-                                .wrapper-flow-about
-                                    .content-flow-about
-                                        p Ser una organización líder de coworking en el Perú, destacando por las conexiones profesionales de creatividad e innovación, tener crecimiento sostenible de nuevos espacios enfocados en dar los mejores servicios a nuestros coworkers.
 
         include includes/footer.pug
         script(src="js/nosotros.js",type="text/javascript")
