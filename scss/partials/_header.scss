@@ -17,10 +17,12 @@
 		}
 		.navbar-collapse {
 			background-color: $oc-black-light;
-			padding: 35px 0 0;
 			@include media-breakpoint-up(md) {
 				background-color: transparent;
 				padding: 0;
+			}
+			ul.navbar-nav {
+				padding: 35px 0 0;
 			}
 		}
 	}
