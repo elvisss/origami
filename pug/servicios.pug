@@ -1,0 +1,128 @@
+doctype html
+html(lang='es')
+    include includes/head.pug
+    body
+        include includes/header.pug
+
+        section#main-section.full-section
+            #services-section
+                .bg-full-section(style="background-image: url('./images/bg-servicios.jpg');")
+                .wrap-services
+                    .container-fluid
+                        .row.d-flex.justify-content-center
+                            .col-12.col-md-6
+                                h2 LOREM IPSUM LAUDATUM
+                                p dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+        //- section.fluid-section
+        //-     #benefits-main
+        //-         .wrap-benefits
+        //-             .container-fluid
+        //-                 .top-benefits
+        //-                     h2 Beneficios Principales
+        //-                 .boxes-benefits.row.no-gutters.justify-content-center
+
+        //-                     mixin benefit(url, text, main)
+        //-                         .col.box-benefit(class!=attributes.class)
+        //-                             if main == true
+        //-                                 .row.no-gutters.justify-content-center
+        //-                                     .col-6.col-sm-5.col-md-4.d-block.d-lg-none
+        //-                                         ul
+        //-                                             each val, index in benefits
+        //-                                                 if val.text != ""
+        //-                                                     li= val.text
+        //-                                     .col-6.col-sm-5.col-md-4.col-lg-12
+        //-                                         figure
+        //-                                             img(src="./images/" + url)
+        //-                                             figcaption= text
+        //-                             else
+        //-                                 figure
+        //-                                     img(src="./images/" + url)
+        //-                                     figcaption= text
+        //-                         if block
+        //-                             block
+
+        //-                     - var benefits = {1: {'url': 'panoramica.png', 'text': 'Vista panorámica'},2: {'url': 'location.png', 'text': 'Ubicación estratégica'},3: {'url': 'wifi.png', 'text': 'WIFI de fibra óptica'},4: {'url': 'printer.png', 'text': 'Impresoras y fotocopiadoras'},5: {'url': 'technology.png', 'text': 'Alta tecnología'},6: {'url': 'card.png', 'text': 'Tarjeta de miembro'},7: {'url': 'lockers.png', 'text': 'Lockers individuales'},8: {'url': 'ilimited.png', 'text': '', 'main': true},9: {'url': 'camera.png', 'text': 'Cámaras de seguridad y control de acceso'},10: {'url': 'commercial-address.png', 'text': 'Dirección comercial'},11: {'url': 'chair.png', 'text': 'Sillas ergonómicas'},12: {'url': 'corporative-mail.png', 'text': 'E-mail corporativo'},13: {'url': 'air.png', 'text': 'Aire acondicionado'},14: {'url': 'grow.png', 'text': 'Oportunidad de crecer'},15: {'url': 'clean.png', 'text': 'Limpieza y mantenimiento'},16: {'url': 'kitchenette.png', 'text': 'Kitchenette equipado'},17: {'url': 'manager.png', 'text': 'Office manager'},18: {'url': 'comedor.png', 'text': 'Comedor'}}
+                            
+        //-                     each val, index in benefits
+        //-                         if val.main == true
+        //-                             +benefit(val.url, val.text, val.main)(class="main-benefit")
+        //-                         else if index == 12
+        //-                             +benefit(val.url, val.text)
+        //-                                 .col.box-benefit &nbsp;
+        //-                         else
+        //-                             +benefit(val.url, val.text)
+
+        section#members-main
+            .line-members
+                h4 MEMBRESÍAS
+            .boxes-members
+                #accordion.row.no-gutters(role='tablist')
+                  .card.col-12.col-md-6
+                    #headingOne.card-header(role='tab')
+                      h5.mb-0
+                        a(data-toggle='collapse', href='#collapseOne', aria-expanded='true', aria-controls='collapseOne')
+                          | Collapsible Group Item #1
+                    #collapseOne.collapse.show(role='tabpanel', aria-labelledby='headingOne', data-parent='#accordion')
+                      .card-body
+                        | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                  .card.col-12.col-md-6
+                    #headingTwo.card-header(role='tab')
+                      h5.mb-0
+                        a.collapsed(data-toggle='collapse', href='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
+                          | Collapsible Group Item #2
+                    #collapseTwo.collapse(role='tabpanel', aria-labelledby='headingTwo', data-parent='#accordion')
+                      .card-body
+                        | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            .wrap-conditions
+                .container-fluid
+                    .row.justify-content-center
+                        .col-12.col-sm-10.col-md-8
+                            h4 CONDICIONES
+                            ul.list-conditions
+                                li Fecha de Pago: 1er día de cada mes
+                                li Tiempo de Contrato: indeterminado
+                                li Medio de Pago: Transferencia bancaría BCP US$ 94-1802634-1-33 CRAFT DESIGNERS S.A.C.
+                                li Impresiones/Copias: 100 hojas por usuario
+                                li Garantía: Correspondiente a un mes de servicios
+                                li Cotización Válida: 7 días
+                                li Entrega de Espacio: Previa firma de contrato y depósito de garantía
+                                li Horario de Atención:
+                                    span Lun-Vie de 09:00 a 18:00 hrs
+                                    span Sáb de 09:00 a 12:00 hrs
+
+            .line-members
+                h4.line-small SALAS DE REUNIONES, DIRECTORIO Y AUDITORIO
+            .boxes-members
+                #accordion2.row.no-gutters(role='tablist')
+                  .card.col-12.col-md-4
+                    #headingOne2.card-header(role='tab')
+                      h5.mb-0
+                        a(data-toggle='collapse', href='#collapseOne2', aria-expanded='true', aria-controls='collapseOne2')
+                          | Collapsible Group Item #1
+                    #collapseOne2.collapse.show(role='tabpanel', aria-labelledby='headingOne2', data-parent='#accordion2')
+                      .card-body
+                        | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                  .card.col-12.col-md-4
+                    #headingTwo2.card-header(role='tab')
+                      h5.mb-0
+                        a.collapsed(data-toggle='collapse', href='#collapseTwo2', aria-expanded='false', aria-controls='collapseTwo2')
+                          | Collapsible Group Item #2
+                    #collapseTwo2.collapse(role='tabpanel', aria-labelledby='headingTwo2', data-parent='#accordion2')
+                      .card-body
+                        | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                  .card.col-12.col-md-4
+                    #headingThree2.card-header(role='tab')
+                      h5.mb-0
+                        a.collapsed(data-toggle='collapse', href='#collapseThree2', aria-expanded='false', aria-controls='collapseThree2')
+                          | Collapsible Group Item #3
+                    #collapseThree2.collapse(role='tabpanel', aria-labelledby='headingThree2', data-parent='#accordion2')
+                      .card-body
+                        | Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+
+
+
+
+
+        include includes/footer.pug
+        script(src="js/servicios.js",type="text/javascript")

@@ -1,0 +1,31 @@
+#members-main {
+	.line-members {
+		background-color: $oc-black-thin;
+		min-height: 45px;
+		text-align: center;
+		h4 {
+			// line-height: 45px;
+			font-size: 27px;
+			color: #fff;
+			letter-spacing: 3px;
+			font-family: $font-family-antonio-light;
+			padding: 8px 0;
+			&.line-small {
+				font-size: 18px;
+				padding: 13px 0;
+			}
+		}
+	}
+	.boxes-members {
+		.collapse {
+			@include media-breakpoint-up(md) {
+				display: block;
+			}
+		}
+		.card-header {
+			@include media-breakpoint-up(md) {
+				display: none;
+			}
+		}
+	}
+}

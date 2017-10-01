@@ -43,3 +43,9 @@ Thumbs.db
 # pug files
 /includes
 /mixins
+
+# html
+./*.html
+
+# css
+/css
