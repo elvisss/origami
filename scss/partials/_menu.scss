@@ -47,13 +47,15 @@
 		}
 	}
 	&.navbar-dark {
-		li {
-			&.nav-item {
-				a {
-					&.nav-link {
-						color: black;
-						&:hover {
-							color: rgba(black, .6);
+		@include media-breakpoint-up(md) {
+			li {
+				&.nav-item {
+					a {
+						&.nav-link {
+							color: black;
+							&:hover {
+								color: rgba(black, .6);
+							}
 						}
 					}
 				}
