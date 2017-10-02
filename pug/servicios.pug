@@ -1,0 +1,243 @@
+doctype html
+html(lang='es')
+    include includes/head.pug
+    body
+        include includes/header.pug
+
+        section#main-section.full-section
+            #services-section
+                .bg-full-section(style="background-image: url('./images/bg-servicios.jpg');")
+                .wrap-services
+                    .container-fluid
+                        .row.d-flex.justify-content-center
+                            .col-12.col-md-6
+                                h2 LOREM IPSUM LAUDATUM
+                                p dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+        section.fluid-section
+            #benefits-main.section-triangles
+                .wrap-benefits.wrap-triangles
+                    .container-fluid
+                        .top-benefits
+                            h2 Beneficios Principales
+                        .boxes-benefits.row.no-gutters.justify-content-center
+
+                            mixin benefit(url, text, main)
+                                .col.box-benefit(class!=attributes.class)
+                                    if main == true
+                                        .row.no-gutters.justify-content-center
+                                            .col-6.col-sm-5.col-md-4.d-block.d-lg-none
+                                                ul
+                                                    each val, index in benefits
+                                                        if val.text != ""
+                                                            li= val.text
+                                            .col-6.col-sm-5.col-md-4.col-lg-12
+                                                figure
+                                                    img(src="./images/" + url)
+                                                    figcaption= text
+                                    else
+                                        figure
+                                            img(src="./images/" + url)
+                                            figcaption= text
+                                if block
+                                    block
+
+                            - var benefits = {1: {'url': 'panoramica.png', 'text': 'Vista panorámica'},2: {'url': 'location.png', 'text': 'Ubicación estratégica'},3: {'url': 'wifi.png', 'text': 'WIFI de fibra óptica'},4: {'url': 'printer.png', 'text': 'Impresoras y fotocopiadoras'},5: {'url': 'technology.png', 'text': 'Alta tecnología'},6: {'url': 'card.png', 'text': 'Tarjeta de miembro'},7: {'url': 'lockers.png', 'text': 'Lockers individuales'},8: {'url': 'ilimited.png', 'text': '', 'main': true},9: {'url': 'camera.png', 'text': 'Cámaras de seguridad y control de acceso'},10: {'url': 'commercial-address.png', 'text': 'Dirección comercial'},11: {'url': 'chair.png', 'text': 'Sillas ergonómicas'},12: {'url': 'corporative-mail.png', 'text': 'E-mail corporativo'},13: {'url': 'air.png', 'text': 'Aire acondicionado'},14: {'url': 'grow.png', 'text': 'Oportunidad de crecer'},15: {'url': 'clean.png', 'text': 'Limpieza y mantenimiento'},16: {'url': 'kitchenette.png', 'text': 'Kitchenette equipado'},17: {'url': 'manager.png', 'text': 'Office manager'},18: {'url': 'comedor.png', 'text': 'Comedor'}}
+                            
+                            each val, index in benefits
+                                if val.main == true
+                                    +benefit(val.url, val.text, val.main)(class="main-benefit")
+                                else if index == 12
+                                    +benefit(val.url, val.text)
+                                        .col.box-benefit &nbsp;
+                                else
+                                    +benefit(val.url, val.text)
+
+        section#members-main
+            .line-members
+                h4 MEMBRESÍAS
+            .boxes-plans
+                #first-accordion.bg-plan.bg-first-accordion.row.no-gutters(role='tablist')
+                    .card.col-12.col-md-6.content-plan
+                        #headingOne.card-header(role='tab')
+                            h2.mb-0
+                                a(data-toggle='collapse', href='#collapseOne', aria-expanded='true', aria-controls='collapseOne')
+                                    | MEMBRESIA BASIC
+                                    .accordion-ico
+                                        .horizontal
+                                        .vertical
+                        #collapseOne.collapse.show(role='tabpanel', aria-labelledby='headingOne', data-parent='#first-accordion')
+                            .card-body.box-plan
+                                h2 MEMBRESIA BASIC
+                                .plan-content-price
+                                    .plan-price $200
+                                    .plan-taxes (NO INCLUYE IGV 18%)
+                                .plan-review
+                                    p Trae tu computadora portátil, encuentra un lugar libre y comienza a trabajar.
+                                ul.plan-details
+                                    li
+                                        .plan-detail Beneficios generales
+                                    li
+                                        .plan-detail Escritorio flexible
+                                    li
+                                        p (Asiento en cualquier lugar que se acomode a tu forma de trabajo)
+                                    li
+                                        .plan-detail Autoservicio cafetería
+                                    li
+                                        p (café, té y agua)
+                                    li
+                                        .plan-detail Welcome pack
+                                    li
+                                        p (materiales básicos de escritorio)
+                    .card.col-12.col-md-6.content-plan
+                        #headingTwo.card-header(role='tab')
+                            h2.mb-0
+                                a.collapsed(data-toggle='collapse', href='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
+                                    | MEMBRESIA PREMIUM
+                                    .accordion-ico
+                                        .horizontal
+                                        .vertical
+                        #collapseTwo.collapse(role='tabpanel', aria-labelledby='headingTwo', data-parent='#first-accordion')
+                            .card-body.box-plan
+                                h2 MEMBRESIA PREMIUM
+                                .plan-content-price
+                                    .plan-price $300
+                                    .plan-taxes (NO INCLUYE IGV 18%)
+                                .plan-review
+                                    p Trae tu computadora portátil y con seguridad tendrás un esvpacio fijo para empezar a trabajar.
+                                ul.plan-details
+                                    li
+                                        .plan-detail Beneficios generales
+                                    li
+                                        .plan-detail Escritorio flexible
+                                    li
+                                        p ((Reservado))
+                                    li
+                                        .plan-detail Estacionamiento para visitas
+                                    li
+                                        .plan-detail Autoservicio cafetería
+                                    li
+                                        p (café, té y agua)
+                                    li
+                                        .plan-detail Welcome pack
+                                    li
+                                        p (Agenda y materiales básicos de escritorio)
+            .section-triangles.wrap-conditions
+                .wrap-triangles
+                    .container-fluid
+                        .content-conditions
+                            .row.justify-content-center
+                                .col-12.col-sm-10.col-md-8
+                                    h4 CONDICIONES
+                                    .row
+                                        .col-12.col-md-6
+                                            ul
+                                                li Fecha de Pago: 1er día de cada mes
+                                                li Medio de Pago: Transferencia bancaría BCP US$ 94-1802634-1-33 CRAFT DESIGNERS S.A.C.
+                                                li Garantía: Correspondiente a un mes de servicios
+                                                li Entrega de Espacio: Previa firma de contrato y depósito de garantía
+                                        .col-12.col-md-6
+                                            ul
+                                                li Tiempo de Contrato: indeterminado
+                                                li Impresiones/Copias: 100 hojas por usuario
+                                                li Cotización Válida: 7 días
+                                                li Horario de Atención:
+                                                    span Lun-Vie de 09:00 a 18:00 hrs
+                                                    span Sáb de 09:00 a 12:00 hrs
+
+            .line-members
+                h4.line-small SALAS DE REUNIONES, DIRECTORIO Y AUDITORIO
+            .boxes-plans
+                #second-accordion.bg-plan.bg-second-accordion.row.no-gutters(role='tablist')
+                    .card.col-12.col-md-4.content-plan
+                        #headingOne2.card-header(role='tab')
+                            h2.mb-0
+                                a(data-toggle='collapse', href='#collapseOne2', aria-expanded='true', aria-controls='collapseOne2')
+                                    | SALA DE REUNIONES ORIGAMI I &amp; II
+                                    .accordion-ico
+                                        .horizontal
+                                        .vertical
+                        #collapseOne2.collapse.show(role='tabpanel', aria-labelledby='headingOne2', data-parent='#second-accordion')
+                            .card-body.box-plan
+                                h2 SALA DE REUNIONES ORIGAMI I &amp; II
+                                .plan-content-price
+                                    .plan-price $30
+                                    .plan-taxes (NO INCLUYE IGV 18%)
+                                .plan-review
+                                    p Sala para todo tipo de reuniones de coordinación.
+                                    p Está situado en el 6to piso dentro de nuestras oficinas de Origami.
+                                    .sub-review
+                                        p
+                                            b Aforo:&nbsp;
+                                            span 6 personas
+                                        p
+                                            b Fecha y Horario de Uso:
+                                            br
+                                            span L – V de 09:00 hrs – 18:00 hrs
+                                                br
+                                                | S de 09:00 hrs – 12:00 hrs
+                                        p
+                                            b Tiempo de Separación:
+                                            br
+                                            span 1 día hábil de anticipación
+                    .card.col-12.col-md-4.content-plan
+                        #headingTwo2.card-header(role='tab')
+                            h2.mb-0
+                                a.collapsed(data-toggle='collapse', href='#collapseTwo2', aria-expanded='false', aria-controls='collapseTwo2')
+                                    | DIRECTORIO I &amp; II
+                                    .accordion-ico
+                                        .horizontal
+                                        .vertical
+                        #collapseTwo2.collapse(role='tabpanel', aria-labelledby='headingTwo2', data-parent='#second-accordion')
+                            .card-body.box-plan
+                                h2 DIRECTORIO I &amp; II
+                                .plan-content-price
+                                    .plan-price $40
+                                    .plan-taxes (NO INCLUYE IGV 18%)
+                                .plan-review
+                                    p Sala para todo tipo de reuniones de coordinación.
+                                    p Está situado en el 13vo piso dentro del Edificio Prime Tower.
+                                    .sub-review
+                                        p
+                                            b Aforo:&nbsp;
+                                            span 10 personas
+                                        p
+                                            b Fecha y Horario de Uso:
+                                            br
+                                            span L – V de 09:00 hrs – 18:00 hrs
+                                        p
+                                            b Tiempo de Separación:
+                                            br
+                                            span 2 días hábiles de anticipación
+                    .card.col-12.col-md-4.content-plan
+                        #headingThree2.card-header(role='tab')
+                            h2.mb-0
+                                a.collapsed(data-toggle='collapse', href='#collapseThree2', aria-expanded='false', aria-controls='collapseThree2')
+                                    | AUDITORIO SUM
+                                    .accordion-ico
+                                        .horizontal
+                                        .vertical
+                        #collapseThree2.collapse(role='tabpanel', aria-labelledby='headingThree2', data-parent='#second-accordion')
+                            .card-body.box-plan
+                                h2 DIRECTORIO I &amp; II
+                                .plan-content-price
+                                    .plan-price $80
+                                    .plan-taxes (NO INCLUYE IGV 18%)
+                                .plan-review
+                                    p Es perfecto para eventos de lanzamiento, reuniones anuales de planeación, talleres o eventos networking.
+                                    p Está situado en el 13vo piso en el Edificio
+                                    .sub-review
+                                        p
+                                            b Aforo:&nbsp;
+                                            span 40 perrsonas
+                                        p
+                                            b Fecha y Horario de Uso:
+                                            br
+                                            span L – V de 09:00 hrs – 18:00 hrs
+                                        p
+                                            b Tiempo de Separación:
+                                            br
+                                            span 2 días hábiles de anticipación
+
+        include includes/footer.pug
+        script(src="js/servicios.js",type="text/javascript")

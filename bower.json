@@ -1,0 +1,22 @@
+{
+  "name": "origami",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Elvis Saavedra <esaavedrabs@belatrixsf.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/elvisss/origami",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "v4.0.0-beta",
+    "bourbon": "^4.3.4",
+    "swiper": "^3.4.2"
+  }
+}

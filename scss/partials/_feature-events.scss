@@ -1,0 +1,123 @@
+#feature-event {
+	height: 500px;
+	.top-feature-event {
+		background-color: $oc-yellow-medium;
+		height: 50px;
+		text-align: center;
+		h4 {
+			line-height: 50px;
+			font-family: $font-family-antonio;
+			font-size: 18px;
+			letter-spacing: 3px;
+			color: $oc-black-medium;
+			@include media-breakpoint-up(lg) {
+				font-size: 27px;
+			}
+		}
+	}
+	.body-feature-event {
+		padding: 20px 20px 50px 30px;
+		@include media-breakpoint-up(md) {
+			padding: 20px 15px 15px 15px;
+		}
+		@include media-breakpoint-up(lg) {
+			padding-left: 50px;
+		}
+		// @include media-breakpoint-up(xl) {
+		// 	padding: 20px 15px 15px 50px;
+		// }
+		height: 450px;
+		.boxes-feature-event {
+			height: 100%;
+			overflow-y: auto;
+			overflow-x: hidden;
+			.box-fetaure-event {
+				margin-top: 30px;
+				&:first-child {
+					margin-top: 0;
+				}
+				.box-top-feature {
+					height: 27px;
+					h3 {
+						color: $oc-yellow-medium;
+						line-height: 27px;
+						font-family: $font-family-antonio-bold;
+						text-transform: uppercase;
+						span {
+							color: $oc-gray;
+							font-family: $font-family-antonio;
+						}
+					}
+				}
+				.boxes-single-feature {
+					margin-top: 25px;
+					.box-single-feature {
+						margin-top: 30px;
+						&:first-child {
+							margin-top: 0;
+						}
+						.box-content-feature {
+							// height: 100px;
+							.single-img-feature {
+								height: 100%;
+								background-size: cover;
+								background-position: top center;
+								background-repeat: no-repeat;
+								display: block;
+								min-height: 100px;
+							}
+							.single-event-review {
+								@include media-breakpoint-up(lg) {
+									padding: 0 25px;
+									h2 {
+										font-size: 15px;
+									}
+									p {
+										font-size: 13.5px;
+									}
+								}
+								padding: 0 20px;
+								h2 {
+									color: $oc-black-dark;
+									font-size: 13px;
+									font-family: $font-family-antonio;
+									padding-top: 7px;
+									text-transform: uppercase;
+									margin-bottom: 5px;
+								}
+								p {
+									color: $oc-medium-dark;
+									font-family: $font-family-roboto;
+									font-size: 10.5px;
+									&.date-event {
+
+									}
+									&.location-event {
+
+									}
+								}
+								.link-event {
+									margin-top: 10px;
+									background-color: $oc-black-regular;
+									display: inline-block;
+									line-height: 20px;
+									padding: 0 20px;
+									font-size: 10px;
+									font-family: $font-family-antonio-bold;
+									color: $oc-yellow;
+									border-radius: 10px;
+									white-space: nowrap;
+									@include transition(.5s);
+									&:hover {
+										background-color: $oc-yellow;
+										color: $oc-black-regular;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

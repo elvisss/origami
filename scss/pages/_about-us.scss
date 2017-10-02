@@ -1,0 +1,116 @@
+#pills-about {
+	height: 100%;
+	.pill-content {
+		height: 100%;
+		width: 100%;
+	}
+	.pill-bg {
+		height: calc(100% - 330px);
+		@include media-breakpoint-up(md) {
+			height: 100%;	
+		}
+		background-position: top center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		position: absolute;
+		z-index: 1;
+		width: 100%;
+	}
+}
+
+#pills-tab-about {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 300px;
+	z-index: 2;
+	background-color: white;
+	height: 30px;
+	@include media-breakpoint-up(md) {
+		background-color: transparent;
+		bottom: 50px;
+	}
+	.pill-tab {
+		width: 33.33%;
+		text-align: center;
+		line-height: 30px;
+		@include media-breakpoint-up(md) {
+			width: 300px;
+		}
+		a {
+			padding: .5em 1em;
+			line-height: 27px;
+			font-size: 12px;
+			font-family: $font-family-antonio-bold;
+			color: rgba(black, .6);
+			@include transition(.5s);
+			&.active, &:hover {
+				font-size: 14px;
+				color: black;
+			}
+			@include media-breakpoint-up(md) {
+				font-size: 22.5px;
+				&.active, &:hover {
+					font-size: 27px;
+				}
+			}
+		}
+	}
+}
+
+.flow-about {
+	// background-color: $oc-yellow;
+	width: 100%;
+	padding: 50px 0 50px 80px;
+	position: absolute;
+	bottom: 0;
+	height: 300px;
+	z-index: 2;
+	@include media-breakpoint-up(md) {
+		bottom: auto;
+		height: auto;
+		width: 70%;
+		top: 50%;
+		@include transform(translate(0, -50%));
+	}
+	@include media-breakpoint-up(lg) {
+		width: 50%;
+	}
+	&:after {
+		content: "";
+		position: absolute;
+		left: -200px;
+		right: -75px;
+		bottom: 0;
+		top: 0;
+		background-color: $oc-yellow;
+		z-index: 1;
+		@include media-breakpoint-up(md) {
+			@include transform(skew(-30deg));
+		}
+	}
+	.wrapper-flow-about {
+		position: relative;
+		z-index: 2;
+		&:after {
+			content: "";
+			position: absolute;
+			background-image: url('../images/origami.png');
+			background-repeat: no-repeat;
+			background-position: top center;
+			width: 113px;
+			height: 81px;
+			top: 50%;
+			left: 0;
+			margin-top: -40.5px;
+		}
+		.content-flow-about {
+			padding-left: 130px;
+			p {
+				font-family: $font-family-roboto-italic;
+				font-size: 15px;
+				color: black;
+			}
+		}
+	}
+}

@@ -1,0 +1,275 @@
+.boxes-plans {
+	@include linear-gradient($oc-yellow, $oc-yellow-dark);
+	h2 {
+		color: $oc-black;
+		font-family: $font-family-antonio-bold;
+		font-size: 21px;
+		line-height: 21px;
+		margin-bottom: 10px;
+		a {
+			color: $oc-black;
+			display: block;
+		}
+	}
+	@include media-breakpoint-up(md) {
+		h2 {
+			font-size: 32px;
+			line-height: 32px;
+		}
+	}
+	.bg-plan {
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: top center;
+		&.bg-first-accordion {
+			@include media-breakpoint-up(md) {
+				background-image: url('../images/bg-first-accordion.jpg');
+			}
+		}
+		&.bg-second-accordion {
+			@include media-breakpoint-up(md) {
+				background-image: url('../images/bg-second-accordion.jpg');
+			}
+		}
+	}
+	.collapse {
+		@include media-breakpoint-up(md) {
+			display: block;
+		}
+	}
+	.card-header {
+		@include media-breakpoint-up(md) {
+			display: none;
+		}
+		padding: 0;
+		h2 {
+			padding: 0.75rem 1.25rem;
+			position: relative;
+			[data-toggle="collapse"] {
+				.accordion-ico {
+					width: 20px;
+					height: 20px;
+					position: absolute;
+					right: 20px;
+					top: 50%;
+					margin-top: -10px;
+					@include media-breakpoint-up(md) {
+						display: none;
+					}
+					.horizontal {
+						transition: all 0.5s ease-in-out;
+					    transform: rotate(90deg);
+					    opacity: 0;
+					    position: absolute;
+				        background-color: $oc-black;
+				        width: 20px;
+				        height: 2px;
+				        left: 50%;
+				        margin-left: -10px;
+				        top: 50%;
+				        margin-top: -1px;
+					}
+					.vertical {
+						transition: all 0.5s ease-in-out;
+						transform: rotate(90deg);
+						position: absolute;
+					    background-color: $oc-black;
+					    width: 2px;
+					    height: 20px;
+					    left: 50%;
+					    margin-left: -1px;
+					    top: 50%;
+					    margin-top: -10px;
+					}
+				}
+				&.collapsed {
+					.vertical {
+					    transition: all 0.5s ease-in-out;
+					    transform: rotate(-90deg);
+					}
+					.horizontal {
+					    transition: all 0.5s ease-in-out;
+					    transform: rotate(-90deg);
+					    opacity: 1;
+					}
+				}
+			}
+		}
+	}
+	.content-plan {
+		border-bottom: 2px solid white;
+		@include media-breakpoint-up(md) {
+			border-right: 1px dashed $oc-gray-dark;
+			border-bottom: medium none;
+			&:last-child {
+				border-right: medium none;
+			}
+		}
+		&.card {
+			background-color: transparent;
+			.card-header {
+				text-align: center;
+			}
+		}
+	}
+	.box-plan {
+		padding: 20px 50px;
+		text-align: center;
+		.plan-content-price {
+			margin-bottom: 7px;
+			.plan-price {
+				font-family: $font-family-antonio;
+				font-size: 18px;
+				line-height: 18px;
+				margin-bottom: 12px;
+				span {
+					font-size: 10px;
+					font-family: $font-family-antonio-light;
+				}
+			}
+			.plan-taxes {
+				font-family: $font-family-antonio-bold;
+				font-size: 10px;
+				line-height: 10px;
+			}
+		}
+		.plan-review {
+			font-family: $font-family-roboto-italic;
+			font-size: 12px;
+			color: black;
+			margin-bottom: 5px;
+			.sub-review {
+				font-size: 10px;
+				p {
+					line-height: 22px;
+				}
+			}
+		}
+		ul {
+			&.plan-details {
+				li {
+					font-family: $font-family-roboto-bold;
+					font-size: 10px;
+				}
+				p {
+					font-family: $font-family-roboto;
+				}
+				.plan-detail {
+					display: inline-block;
+					position: relative;
+					&:after {
+						content: "";
+						background-image: url('../images/plan-ico.png');
+						background-repeat: no-repeat;
+						background-size: cover;
+						background-position: top center;
+						position: absolute;
+						top: 5px;
+						left: -25px;
+						width: 14px;
+						height: 11px;
+					}
+				}
+			}
+		}
+		h2 {
+			display: none;
+		}
+		@include media-breakpoint-up(md) {
+			padding-top: 100px;
+			padding-bottom: 70px;
+			h2 {
+				display: block;
+			}
+			.plan-content-price {
+				.plan-price {
+					font-size: 27px;
+					line-height: 27px;
+					span {
+						font-size: 13px;
+					}
+				}
+				.plan-taxes {
+					font-size: 16px;
+					line-height: 16px;
+				}
+			}
+			.plan-review {
+				font-size: 18px;
+				.sub-review {
+					font-size: 13.5px;
+				}
+			}
+			ul {
+				&.plan-details {
+					li {
+						font-size: 16px;
+					}
+				}
+			}
+		}
+	}
+}
+.plan-bottom {
+	height: 45px;
+	text-align: center;
+	a {
+		background-color: $oc-black-thin;
+		display: block;
+		line-height: 45px;
+		font-family: $font-family-antonio-light;
+		font-size: 15px;
+		color: white;
+		&:hover {
+			background-color: $oc-black-light;
+		}
+	}
+}
+
+.section-triangles {
+	position: relative;
+	&:after, &:before {
+		position: absolute;
+		content: "";
+		background-repeat: repeat-y;
+		width: 90px;
+		top: 0;
+		bottom: 0;
+		display: none;
+	}
+	&:before {
+		background-image: url('../images/left-triangles.png');
+		background-position: left top;
+		left: 0;
+	}
+	&:after {
+		background-image: url('../images/right-triangles.png');
+		background-position: right top;
+		right: 0;
+	}
+	@include media-breakpoint-up(lg) {
+		&:after, &:before {
+			display: block;
+		}
+	}
+	.wrap-triangles {
+		padding: 0 0 60px;
+		&:before {
+			content: "";
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-image: url('../images/bottom-triangles.png');
+			background-position: center bottom;
+			background-repeat: repeat-x;
+			height: 33px;
+		}
+		@include media-breakpoint-up(lg) {
+			padding: 0 100px;
+			&:before {
+				display: none;
+			}
+		}
+	}
+}
