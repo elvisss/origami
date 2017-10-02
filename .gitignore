@@ -46,7 +46,8 @@ Thumbs.db
 
 # html
 *.html
-!/dist
+!/dist/*.html
 
 # css
 *.css
+!/dist/css/*.css
