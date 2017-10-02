@@ -38,7 +38,7 @@
                             <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
                             <li class="nav-item"><a class="nav-link" href="espacios.html">Espacios</a></li>
                             <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Comunidad</a></li>
+                            <li class="nav-item"><a class="nav-link" href="comunidad.html">Comunidad</a></li>
                             <li class="nav-item"><a class="nav-link" href="#">Eventos</a></li>
                             <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
                             <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
@@ -376,101 +376,128 @@
     </section>
     <section class="fluid-section" id="plans-section">
       <div class="boxes-plans">
-        <div class="row no-gutters">
-          <div class="col-12 col-md-4 content-plan">
-            <div class="box-plan">
-              <h2>MEMBRESIA BASIC</h2>
-              <div class="plan-content-price">
-                <div class="plan-price">$200</div>
-                <div class="plan-taxes">(NO INCLUYE IGV 18%)</div>
+        <div class="row no-gutters" id="plans-accordion" role="tablist">
+          <div class="card col-12 col-md-4 content-plan">
+            <div class="card-header" id="headingOne" role="tab">
+              <h2 class="mb-0"><a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">MEMBRESIA BASIC
+                  <div class="accordion-ico">
+                    <div class="horizontal"></div>
+                    <div class="vertical"></div>
+                  </div></a></h2>
+            </div>
+            <div class="collapse show" id="collapseOne" role="tabpanel" aria-labelledby="headingOne" data-parent="#plans-accordion">
+              <div class="card-body box-plan">
+                <h2>MEMBRESIA BASIC</h2>
+                <div class="plan-content-price">
+                  <div class="plan-price">$200</div>
+                  <div class="plan-taxes">(NO INCLUYE IGV 18%)</div>
+                </div>
+                <div class="plan-review">
+                  <p>Trae tu computadora portátil, encuentra un lugar libre y comienza a trabajar.</p>
+                </div>
+                <ul class="plan-details">
+                  <li>
+                    <div class="plan-detail">Beneficios generales</div>
+                  </li>
+                  <li>
+                    <div class="plan-detail">Escritorio flexible</div>
+                  </li>
+                  <li>
+                    <p>(Asiento en cualquier lugar que se acomode a tu forma de trabajo)</p>
+                  </li>
+                  <li>
+                    <div class="plan-detail">Autoservicio cafetería</div>
+                  </li>
+                  <li>
+                    <p>(café, té y agua)</p>
+                  </li>
+                  <li>
+                    <div class="plan-detail">Welcome pack</div>
+                  </li>
+                  <li>
+                    <p>(materiales básicos de escritorio)</p>
+                  </li>
+                </ul>
               </div>
-              <div class="plan-review">
-                <p>Trae tu computadora portátil, encuentra un lugar libre y comienza a trabajar.</p>
-              </div>
-              <ul class="plan-details">
-                <li>
-                  <div class="plan-detail">Beneficios generales</div>
-                </li>
-                <li>
-                  <div class="plan-detail">Escritorio flexible</div>
-                </li>
-                <li>
-                  <p>(Asiento en cualquier lugar que se acomode a tu forma de trabajo)</p>
-                </li>
-                <li>
-                  <div class="plan-detail">Autoservicio cafetería</div>
-                </li>
-                <li>
-                  <p>(café, té y agua)</p>
-                </li>
-                <li>
-                  <div class="plan-detail">Welcome pack</div>
-                </li>
-                <li>
-                  <p>(materiales básicos de escritorio)</p>
-                </li>
-              </ul>
             </div>
           </div>
-          <div class="col-12 col-md-4 content-plan">
-            <div class="box-plan">
-              <h2>SALAS</h2>
-              <div class="plan-content-price">
-                <div class="plan-price"><span>desde </span>$30<span>por hra.</span></div>
-                <div class="plan-taxes">(NO INCLUYE IGV 18%)</div>
+          <div class="card col-12 col-md-4 content-plan">
+            <div class="card-header" id="headingTwo" role="tab">
+              <h2 class="mb-0"><a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">SALAS
+                  <div class="accordion-ico">
+                    <div class="horizontal"></div>
+                    <div class="vertical"></div>
+                  </div></a></h2>
+            </div>
+            <div class="collapse" id="collapseTwo" role="tabpanel" aria-labelledby="headingTwo" data-parent="#plans-accordion">
+              <div class="card-body box-plan">
+                <h2>SALAS</h2>
+                <div class="plan-content-price">
+                  <div class="plan-price"><span>desde </span>$30<span>por hra.</span></div>
+                  <div class="plan-taxes">(NO INCLUYE IGV 18%)</div>
+                </div>
+                <div class="plan-review">
+                  <p>Para los que no estén afiliados, tenemos disponibles nuestros espacios para reuniones y/o presentaciones, totalmente equipados.</p>
+                </div>
+                <ul class="plan-details">
+                  <li>
+                    <div class="plan-detail">SALA DE REUNIONES ORIGAMI I Y II</div>
+                  </li>
+                  <li>
+                    <div class="plan-detail">DIRECTORIO I Y II</div>
+                  </li>
+                  <li>
+                    <div class="plan-detail">AUDITORIO SUM</div>
+                  </li>
+                </ul>
               </div>
-              <div class="plan-review">
-                <p>Para los que no estén afiliados, tenemos disponibles nuestros espacios para reuniones y/o presentaciones, totalmente equipados.</p>
-              </div>
-              <ul class="plan-details">
-                <li>
-                  <div class="plan-detail">SALA DE REUNIONES ORIGAMI I Y II</div>
-                </li>
-                <li>
-                  <div class="plan-detail">DIRECTORIO I Y II</div>
-                </li>
-                <li>
-                  <div class="plan-detail">AUDITORIO SUM</div>
-                </li>
-              </ul>
             </div>
           </div>
-          <div class="col-12 col-md-4 content-plan">
-            <div class="box-plan">
-              <h2>MEMBRESIA PREMIUM</h2>
-              <div class="plan-content-price">
-                <div class="plan-price">$300</div>
-                <div class="plan-taxes">(NO INCLUYE IGV 18%)</div>
+          <div class="card col-12 col-md-4 content-plan">
+            <div class="card-header" id="headingThree" role="tab">
+              <h2 class="mb-0"><a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">MEMBRESIA PREMIUM
+                  <div class="accordion-ico">
+                    <div class="horizontal"></div>
+                    <div class="vertical"></div>
+                  </div></a></h2>
+            </div>
+            <div class="collapse" id="collapseThree" role="tabpanel" aria-labelledby="headingThree" data-parent="#plans-accordion">
+              <div class="card-body box-plan">
+                <h2>MEMBRESIA PREMIUM</h2>
+                <div class="plan-content-price">
+                  <div class="plan-price">$300</div>
+                  <div class="plan-taxes">(NO INCLUYE IGV 18%)</div>
+                </div>
+                <div class="plan-review">
+                  <p>Trae tu computadora portátil y con seguridad tendrás un esvpacio fijo para empezar a trabajar.</p>
+                </div>
+                <ul class="plan-details">
+                  <li>
+                    <div class="plan-detail">Beneficios generales</div>
+                  </li>
+                  <li>
+                    <div class="plan-detail">Escritorio flexible</div>
+                  </li>
+                  <li>
+                    <p>((Reservado))</p>
+                  </li>
+                  <li>
+                    <div class="plan-detail">Estacionamiento para visitas</div>
+                  </li>
+                  <li>
+                    <div class="plan-detail">Autoservicio cafetería</div>
+                  </li>
+                  <li>
+                    <p>(café, té y agua)</p>
+                  </li>
+                  <li>
+                    <div class="plan-detail">Welcome pack</div>
+                  </li>
+                  <li>
+                    <p>(Agenda y materiales básicos de escritorio)</p>
+                  </li>
+                </ul>
               </div>
-              <div class="plan-review">
-                <p>Trae tu computadora portátil y con seguridad tendrás un esvpacio fijo para empezar a trabajar.</p>
-              </div>
-              <ul class="plan-details">
-                <li>
-                  <div class="plan-detail">Beneficios generales</div>
-                </li>
-                <li>
-                  <div class="plan-detail">Escritorio flexible</div>
-                </li>
-                <li>
-                  <p>((Reservado))</p>
-                </li>
-                <li>
-                  <div class="plan-detail">Estacionamiento para visitas</div>
-                </li>
-                <li>
-                  <div class="plan-detail">Autoservicio cafetería</div>
-                </li>
-                <li>
-                  <p>(café, té y agua)</p>
-                </li>
-                <li>
-                  <div class="plan-detail">Welcome pack</div>
-                </li>
-                <li>
-                  <p>(Agenda y materiales básicos de escritorio)</p>
-                </li>
-              </ul>
             </div>
           </div>
         </div>

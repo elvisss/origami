@@ -1,48 +1,5 @@
 #benefits-main {
-	position: relative;
-	&:after, &:before {
-		position: absolute;
-		content: "";
-		background-repeat: repeat-y;
-		width: 90px;
-		top: 0;
-		bottom: 0;
-		display: none;
-	}
-	&:before {
-		background-image: url('../images/left-triangles.png');
-		background-position: left top;
-		left: 0;
-	}
-	&:after {
-		background-image: url('../images/right-triangles.png');
-		background-position: right top;
-		right: 0;
-	}
-	@include media-breakpoint-up(lg) {
-		&:after, &:before {
-			display: block;
-		}
-	}
 	.wrap-benefits {
-		padding: 0 0 60px;
-		&:before {
-			content: "";
-			position: absolute;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			background-image: url('../images/bottom-triangles.png');
-			background-position: center bottom;
-			background-repeat: repeat-x;
-			height: 33px;
-		}
-		@include media-breakpoint-up(lg) {
-			padding: 0 100px;
-			&:before {
-				display: none;
-			}
-		}
 		.top-benefits {
 			padding-top: 30px;
 			text-align: center;
