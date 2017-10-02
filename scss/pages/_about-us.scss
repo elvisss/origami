@@ -45,7 +45,7 @@
 			color: rgba(black, .6);
 			@include transition(.5s);
 			&.active, &:hover {
-				font-size: 14px;
+				font-size: 12px;
 				color: black;
 			}
 			@include media-breakpoint-up(md) {
@@ -64,7 +64,7 @@
 	bottom: 0;
 	height: 300px;
 	z-index: 2;
-	padding: 40px 60px;
+	padding: 20px 30px;
 	@include media-breakpoint-up(md) {
 		bottom: auto;
 		height: auto;
@@ -102,7 +102,7 @@
 			margin-top: 15px;
 			p {
 				font-family: $font-family-roboto-italic;
-				font-size: 15px;
+				font-size: 12px;
 				color: black;
 			}
 		}
@@ -118,6 +118,9 @@
 				margin-left: 130px;
 				margin-top: 0;
 				text-align: left;
+				p {
+					font-size: 15px;
+				}
 			}
 		}
 	}
