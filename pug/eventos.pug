@@ -1,0 +1,43 @@
+doctype html
+html(lang='es')
+    include includes/head.pug
+    body
+        include includes/header.pug
+
+        section#events-section.fluid-secion
+            .full-page
+                .row.no-gutters
+                    .feature-events.col-12.col-md-8
+                        #events-slider.swiper-container
+                            .swiper-wrapper
+                                each val in [1, 2, 3, 4, 5]
+                                    .swiper-slide
+                                        .feature-bg(style="background-image: url('./images/feature-1.jpg')")
+                                        .feature-links
+                                            .wrap-feature-links
+                                                a.btn.btn-main(href="#") Me apunto
+                                                a.btn.btn-main.btn-inverse(href="#") Ver más
+                            .swiper-button-next
+                            .swiper-button-prev
+                    #list-events.col-12.col-md-4
+                        .wrap-list-events
+                            .main-list-events
+                                .cont-list-events
+                                    .scrollbar
+                                        .handle
+                                            .mousearea
+                                    #boxes-list-events.frame
+                                        .slidee
+                                            each val in [1, 2, 3, 4, 5, 6,6,6,6,6,6,66,6,6,66,6,6,6,6,6]
+                                                .box-list-event(class=val == 3 ? "event-active" : "")
+                                                    h2
+                                                        a(href="#") Anger Manegement secrets with Dr. Bruce Banner
+                                                    a(href="#").date Martes 9 de setiembre
+
+            section.fluid-section
+                .
+
+
+        include includes/footer.pug
+        script(src="bower_components/sly/dist/sly.min.js")
+        script(src="js/eventos.js",type="text/javascript")

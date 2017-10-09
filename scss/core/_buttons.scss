@@ -1,0 +1,32 @@
+.btn {
+  &.btn-transparent {
+    background-color: transparent;
+    border: 1px solid white;
+    @include transition(.5s);
+    color: white;
+    font-size: 16px;
+    font-family: $font-family-antonio;
+    &:hover {
+      background-color: rgba(0,0,0,.5);
+    }
+  }
+  &.btn-main {
+    line-height: 32px;
+    font-family: $font-family-antonio;
+    font-size: 16px;
+    padding: 0 36px;
+    color: $oc-black;
+    border-radius: 18px;
+    background-color: $oc-yellow;
+    @include transition(.5s);
+    &:hover {
+      background-color: rgba($oc-yellow, .8);
+    }
+    &.btn-inverse {
+      background-color: white;
+      &:hover {
+        background-color: rgba(white, .8);
+      }
+    }
+  }
+}
