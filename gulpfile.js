@@ -64,6 +64,7 @@ gulp.task('clean:dist', function () {
 
 gulp.task('copy:bower', function () {
     var files = mainBowerFiles(['**/*.js', '!**/*.min.js']);
+    files.push('bower_components/sly/dist/sly.js');
     return gulp.src(files)
         .pipe(uglify())
         .pipe(rename({ suffix: '.min' }))

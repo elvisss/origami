@@ -1,0 +1,9 @@
+#main-sidebar {
+	padding-left: 45px;
+	.aside-block {
+		margin-top: 20px;
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+}

@@ -18,6 +18,7 @@
     "bootstrap": "v4.0.0-beta",
     "bourbon": "^4.3.4",
     "swiper": "^3.4.2",
-    "sly": "^1.6.1"
+    "sly": "^1.6.1",
+    "bootstrap-datepicker": "^1.7.1"
   }
 }

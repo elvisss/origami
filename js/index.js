@@ -1,7 +1,9 @@
 var mainSwiper = new Swiper('#main-slider', {
     paginationClickable: true,
     nextButton: '.swiper-button-next',
-    prevButton: '.swiper-button-prev'
+    prevButton: '.swiper-button-prev',
+    autoplay: 3000,
+    autoplayDisableOnInteraction: false
 });
 
 var galleryTop = new Swiper('#slider-room', {

@@ -1,0 +1,62 @@
+$datepicker-head: #0c0c0c;
+$datepicker-date: #f2f3f3;
+$datepicker-first-column: #272525;
+$datepicker-other-day: #dbdcdd;
+$datepicker-event-day: #fbf49b;
+$datepicker-active: #204d74;
+// $datepicker-today: 
+
+.datepicker {
+	&.datepicker-inline {
+		width: 100%;
+	}
+	.datepicker-days, .datepicker-months, .datepicker-years, .datepicker-decades, .datepicker-centuries {
+		table {
+			width: 100%;
+			max-width: 100%;
+			th, td {
+				padding: 0.75rem;
+				border-radius: 0;
+				font-family: $font-family-antonio-light;
+			}
+			thead {
+				tr {
+					th {
+						background-color: $oc-yellow;
+						&.dow {
+							background-color: $datepicker-head;
+							color: white;
+						}
+					}
+				}
+			}
+			tr {
+				td {
+					&.day {
+						background-color: $datepicker-date;
+						&.old, &.new {
+							background-color: $datepicker-other-day;
+						}
+						&.today {
+							background-color: $datepicker-event-day;
+						}
+						&.active {
+							background-color: $datepicker-active;
+							color: white;
+						}
+						&:first-child {
+							background-color: $datepicker-first-column;
+							color: white;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.modal-xl {
+	@include media-breakpoint-up(xl) {
+		max-width: 1140px;
+	}
+}

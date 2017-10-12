@@ -4,40 +4,130 @@ html(lang='es')
     body
         include includes/header.pug
 
-        section#events-section.fluid-secion
-            .full-page
-                .row.no-gutters
-                    .feature-events.col-12.col-md-8
-                        #events-slider.swiper-container
-                            .swiper-wrapper
-                                each val in [1, 2, 3, 4, 5]
-                                    .swiper-slide
-                                        .feature-bg(style="background-image: url('./images/feature-1.jpg')")
-                                        .feature-links
-                                            .wrap-feature-links
-                                                a.btn.btn-main(href="#") Me apunto
-                                                a.btn.btn-main.btn-inverse(href="#") Ver más
-                            .swiper-button-next
-                            .swiper-button-prev
-                    #list-events.col-12.col-md-4
-                        .wrap-list-events
-                            .main-list-events
-                                .cont-list-events
-                                    .scrollbar
-                                        .handle
-                                            .mousearea
-                                    #boxes-list-events.frame
-                                        .slidee
-                                            each val in [1, 2, 3, 4, 5, 6,6,6,6,6,6,66,6,6,66,6,6,6,6,6]
-                                                .box-list-event(class=val == 3 ? "event-active" : "")
-                                                    h2
-                                                        a(href="#") Anger Manegement secrets with Dr. Bruce Banner
-                                                    a(href="#").date Martes 9 de setiembre
+        section.fluid-secion
+            .container
+                #events-section
+                    .row.no-gutters
+                        .feature-events.col-12.col-md-8
+                            #events-slider.swiper-container.swiper-button-white
+                                .swiper-wrapper
+                                    each val in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+                                        .swiper-slide
+                                            .feature-bg(style="background-image: url('./images/feature-1.jpg')")
+                                            .feature-links
+                                                .wrap-feature-links
+                                                    a.btn.btn-main(href="#") Me apunto
+                                                    a.btn.btn-main.btn-inverse(href="#", data-toggle="modal", data-target='.event-1') Ver más
+                                            .feature-body.d-block.d-md-none
+                                                h2 Anger Manegement secrets with Dr. Bruce Banner
+                                                a(href="#").date Martes 9 de setiembre
+                                .swiper-button-next
+                                .swiper-button-prev
+                        #list-events.col-12.col-md-4.d-none.d-md-block
+                            .wrap-list-events
+                                .main-list-events
+                                    .cont-list-events
+                                        .scrollbar
+                                            .handle
+                                                .mousearea
+                                        #boxes-list-events.frame
+                                            .slidee
+                                                each val in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+                                                    .box-list-event(data-slide= "slide-" + val, class=val == 1 ? "event-active" : "")
+                                                        h2
+                                                            a(href="#") Anger Manegement secrets with Dr. Bruce Banner
+                                                        a(href="#").date Martes 9 de setiembre
 
-            section.fluid-section
-                .
+        section.fluid-section
+            .container
+                .container-events
+                    .row.no-gutters
+                        #main-events.col-12.col-md-8
+                            .top-main-events
+                                h3 EVENTOS DEL MES
+                            .body-main-events
+                                each val in [1, 2, 1, 2, 1]
+                                    .main-event
+                                        .row.no-gutters
+                                            .col-4
+                                                a.bg-main-event(href="#", style="background-image: url('./images/mainevent" + val + ".jpg')")
+                                            .col-8
+                                                .wrap-main-event
+                                                    .content-main-event
+                                                        .title-main-event
+                                                            h2
+                                                                a(href="#") Dr. Strange - Sanctum Santorum Guided Tour
+                                                        .desc-main-event
+                                                            a(href="#").author Sanctum Santorum
+                                                            p 177A Bleecker Street, Greenwich Village
+                                                            p Miércoles, 6 de Setiembre - 19:00 - 21:00 hrs.
+                                                        .social-main-event
+                                                            a.btn.btn-main.btn-sm(href="#") Me apunto
+                                                            a.btn.btn-social.btn-facebook.d-none.d-md-inline-block(href="#")
+                                                                i.fa.fa-facebook
+                                                                | Share
+                                                            a.btn.btn-social.btn-twitter.d-none.d-md-inline-block(href="#")
+                                                                i.fa.fa-twitter
+                                                                | Share
+
+
+                        .col-12.col-md-4.d-none.d-md-block
+                            aside#main-sidebar
+                                .aside-block
+                                    #datepicker
+                                    input#my_hidden_input(type="hidden")
+                                .aside-block
+                                    div(style="height: 700px; width: 100%; background-color: #d1d1d1")
+
+        .modal.fade.event-modal(tabindex='-1', role='dialog', aria-labelledby='myLargeModalLabel', aria-hidden='true', class='event-1')
+            .modal-dialog.modal-lg.modal-xl
+                .modal-content
+                    .modal-body
+                        button.close(type='button', data-dismiss='modal', aria-label='Close')
+                            span(aria-hidden='true') ×
+                        .modal-content-event
+                            .row.no-gutters
+                                .col-12.col-lg-6
+                                    .modal-event-bg(style="background-image: url('./images/modal-event1.jpg')")
+                                .col-12.col-lg-6
+                                    .wrap-content-event
+                                        .event-title
+                                            h2 Anger Manegement secrets with Dr. Bruce Banner
+                                        .event-info
+                                            .box-event-info
+                                                .info-img.d-none.d-md-block
+                                                    i.fa.fa-map-marker
+                                                .info-content
+                                                    p
+                                                        b Origami - Auditorio SUM
+                                                    p (Av. Contralmirante Montero 421-13D. Magdalena del Mar)
+                                            .box-event-info
+                                                .info-img.d-none.d-md-block
+                                                    i.fa.fa-clock-o
+                                                .info-content
+                                                    p Viernes, 8 de Setiembre - 19:30 - 19:45 hrs.
+                                        .event-content
+                                            h4 lorem ipsum
+                                            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                                | tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                                | quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                                | consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                                | cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                                | proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                        .event-social
+                                            a.btn.btn-main(href="#") Me apunto
+                                            a.btn.btn-social.btn-facebook(href="#")
+                                                i.fa.fa-facebook
+                                                | Share
+                                            a.btn.btn-social.btn-twitter(href="#")
+                                                i.fa.fa-twitter
+                                                | Share
+
+
 
 
         include includes/footer.pug
         script(src="bower_components/sly/dist/sly.min.js")
+        script(src="bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js",type="text/javascript")
+        script(src="js/vendor/bootstrap-datepicker.es.min.js",type="text/javascript")
         script(src="js/eventos.js",type="text/javascript")
