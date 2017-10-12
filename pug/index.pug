@@ -100,7 +100,7 @@ html(lang='es')
         section#plans-section.fluid-section
             .boxes-plans
                 #plans-accordion.row.no-gutters(role='tablist')
-                    .card.col-12.col-md-4.content-plan
+                    .card.col-12.col-md-4.order-md-1.content-plan
                         #headingOne.card-header(role='tab')
                             h2.mb-0
                                 a(data-toggle='collapse', href='#collapseOne', aria-expanded='true', aria-controls='collapseOne')
@@ -131,33 +131,7 @@ html(lang='es')
                                         .plan-detail Welcome pack
                                     li
                                         p (materiales básicos de escritorio)
-                    .card.col-12.col-md-4.content-plan
-                        #headingTwo.card-header(role='tab')
-                            h2.mb-0
-                                a.collapsed(data-toggle='collapse', href='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
-                                    | SALAS
-                                    .accordion-ico
-                                        .horizontal
-                                        .vertical
-                        #collapseTwo.collapse(role='tabpanel', aria-labelledby='headingTwo', data-parent='#plans-accordion')
-                            .card-body.box-plan
-                                h2 SALAS
-                                .plan-content-price
-                                    .plan-price
-                                        span desde 
-                                        | $30
-                                        span por hra.
-                                    .plan-taxes (NO INCLUYE IGV 18%)
-                                .plan-review
-                                    p Para los que no estén afiliados, tenemos disponibles nuestros espacios para reuniones y/o presentaciones, totalmente equipados.
-                                ul.plan-details
-                                    li
-                                        .plan-detail SALA DE REUNIONES ORIGAMI I Y II
-                                    li
-                                        .plan-detail DIRECTORIO I Y II
-                                    li
-                                        .plan-detail AUDITORIO SUM
-                    .card.col-12.col-md-4.content-plan
+                    .card.col-12.col-md-4.order-md-3.content-plan
                         #headingThree.card-header(role='tab')
                             h2.mb-0
                                 a.collapsed(data-toggle='collapse', href='#collapseThree', aria-expanded='false', aria-controls='collapseThree')
@@ -190,76 +164,32 @@ html(lang='es')
                                         .plan-detail Welcome pack
                                     li
                                         p (Agenda y materiales básicos de escritorio)
-            //- .boxes-plans
-                .row.no-gutters
-                    .col-12.col-md-4.content-plan
-                        .box-plan
-                            h2 MEMBRESIA BASIC
-                            .plan-content-price
-                                .plan-price $200
-                                .plan-taxes (NO INCLUYE IGV 18%)
-                            .plan-review
-                                p Trae tu computadora portátil, encuentra un lugar libre y comienza a trabajar.
-                            ul.plan-details
-                                li
-                                    .plan-detail Beneficios generales
-                                li
-                                    .plan-detail Escritorio flexible
-                                li
-                                    p (Asiento en cualquier lugar que se acomode a tu forma de trabajo)
-                                li
-                                    .plan-detail Autoservicio cafetería
-                                li
-                                    p (café, té y agua)
-                                li
-                                    .plan-detail Welcome pack
-                                li
-                                    p (materiales básicos de escritorio)
-
-                    .col-12.col-md-4.content-plan
-                        .box-plan
-                            h2 SALAS
-                            .plan-content-price
-                                .plan-price
-                                    span desde 
-                                    | $30
-                                    span por hra.
-                                .plan-taxes (NO INCLUYE IGV 18%)
-                            .plan-review
-                                p Para los que no estén afiliados, tenemos disponibles nuestros espacios para reuniones y/o presentaciones, totalmente equipados.
-                            ul.plan-details
-                                li
-                                    .plan-detail SALA DE REUNIONES ORIGAMI I Y II
-                                li
-                                    .plan-detail DIRECTORIO I Y II
-                                li
-                                    .plan-detail AUDITORIO SUM
-
-                    .col-12.col-md-4.content-plan
-                        .box-plan
-                            h2 MEMBRESIA PREMIUM
-                            .plan-content-price
-                                .plan-price $300
-                                .plan-taxes (NO INCLUYE IGV 18%)
-                            .plan-review
-                                p Trae tu computadora portátil y con seguridad tendrás un esvpacio fijo para empezar a trabajar.
-                            ul.plan-details
-                                li
-                                    .plan-detail Beneficios generales
-                                li
-                                    .plan-detail Escritorio flexible
-                                li
-                                    p ((Reservado))
-                                li
-                                    .plan-detail Estacionamiento para visitas
-                                li
-                                    .plan-detail Autoservicio cafetería
-                                li
-                                    p (café, té y agua)
-                                li
-                                    .plan-detail Welcome pack
-                                li
-                                    p (Agenda y materiales básicos de escritorio)
+                    .card.col-12.col-md-4.order-md-2.content-plan
+                        #headingTwo.card-header(role='tab')
+                            h2.mb-0
+                                a.collapsed(data-toggle='collapse', href='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
+                                    | SALAS
+                                    .accordion-ico
+                                        .horizontal
+                                        .vertical
+                        #collapseTwo.collapse(role='tabpanel', aria-labelledby='headingTwo', data-parent='#plans-accordion')
+                            .card-body.box-plan
+                                h2 SALAS
+                                .plan-content-price
+                                    .plan-price
+                                        span desde 
+                                        | $30
+                                        span por hra.
+                                    .plan-taxes (NO INCLUYE IGV 18%)
+                                .plan-review
+                                    p Para los que no estén afiliados, tenemos disponibles nuestros espacios para reuniones y/o presentaciones, totalmente equipados.
+                                ul.plan-details
+                                    li
+                                        .plan-detail SALA DE REUNIONES ORIGAMI I Y II
+                                    li
+                                        .plan-detail DIRECTORIO I Y II
+                                    li
+                                        .plan-detail AUDITORIO SUM
             .plan-bottom.d-none.d-md-block
                 a(href="#") MÁS INFORMACIÓN
         

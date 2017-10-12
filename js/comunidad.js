@@ -9,6 +9,7 @@ $(function(){
 	var galleryTop = new Swiper('#gallery-comunity', {
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
+        // loop: true
         // spaceBetween: '3%',
         // slidesPerView: 'auto',
         // centeredSlides: true,
@@ -20,7 +21,8 @@ $(function(){
         centeredSlides: true,
         slidesPerView: 'auto',
         touchRatio: 0.2,
-        slideToClickedSlide: true
+        slideToClickedSlide: true,
+        // loop: true
         // spaceBetween: '3.5%',
         // centeredSlides: false,
         // slidesPerView: 'auto',

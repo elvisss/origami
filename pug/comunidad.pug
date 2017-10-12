@@ -9,7 +9,7 @@ html(lang='es')
                 .container
                     #gallery-comunity.swiper-container
                         .swiper-wrapper
-                            mixin feed
+                            mixin feed(val)
                                 .swiper-slide.main-feed
                                     .row.no-gutters
                                         .col-12.col-md-4.feed-img
@@ -17,7 +17,7 @@ html(lang='es')
                                         .col-12.col-md-8.feed-content
                                             .feed-wrap
                                                 .feed-top
-                                                    h2 Sed ut perspiciatis unde omnis iste natus 
+                                                    h2= 'Sed ut perspiciatis unde omnis iste natus ' + val
                                                 .feed-body
                                                     p Ectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                                                 .feed-name
@@ -36,7 +36,7 @@ html(lang='es')
                                                         i.fa.fa-google-plus
 
                             each val in [1, 2, 3, 4, 5, 6, 7]
-                                +feed
+                                +feed(val)
 
                         .swiper-button-next.swiper-button-black.d-block.d-md-none
                         .swiper-button-prev.swiper-button-black.d-block.d-md-none
@@ -44,15 +44,15 @@ html(lang='es')
                     .wrap-comunity-thumbs.d-none.d-md-block
                         #gallery-comunity-thumbs.swiper-container
                             .swiper-wrapper
-                                mixin thumb-feed
+                                mixin thumb-feed(val)
                                     .swiper-slide.thumb-feed
                                         .feed-thumb-content
                                             .feed-thumb-img
                                                 img(src="../images/thumb-comu-1.png")
                                             .feed-thumb-name
-                                                h5 Leonardo
+                                                h5= 'Leonardo ' + val
                                 each val in [1, 2, 3, 4, 5, 6, 7]
-                                    +thumb-feed
+                                    +thumb-feed(val)
 
                         .swiper-button-next.swiper-button-black
                         .swiper-button-prev.swiper-button-black
