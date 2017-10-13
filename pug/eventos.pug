@@ -26,11 +26,8 @@ html(lang='es')
                         #list-events.col-12.col-md-4.d-none.d-md-block
                             .wrap-list-events
                                 .main-list-events
-                                    .cont-list-events
-                                        .scrollbar
-                                            .handle
-                                                .mousearea
-                                        #boxes-list-events.frame
+                                    #feature-container.cont-list-events
+                                        #boxes-list-events
                                             .slidee
                                                 each val in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
                                                     .box-list-event(data-slide= "slide-" + val, class=val == 1 ? "event-active" : "")

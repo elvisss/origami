@@ -31,6 +31,9 @@
 			height: 100%;
 			overflow-y: auto;
 			overflow-x: hidden;
+			.mCSB_scrollTools {
+				background-color: #ccc;
+			}
 			.box-fetaure-event {
 				margin-top: 30px;
 				&:first-child {

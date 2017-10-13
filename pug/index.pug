@@ -57,26 +57,23 @@ html(lang='es')
             .row.no-gutters
                 .col-12.col-md-8
                     .content-slider-room
-                        #slider-room.swiper-container.swiper-button-white
-                            .swiper-wrapper
-                                each val in [1, 2, 3, 4, 5]
-                                    .swiper-slide(style="background-image: url('images/room1.jpg')")
-                                        .slider-room-content
-                                            h4= 'Sala de Reuniones ' + val
-                                            p AFORO: 15 Personas
-                            .swiper-button-next
-                            .swiper-button-prev
-                        #slider-room-thumbs.swiper-container
-                            .swiper-wrapper
-                                each val in [1, 2, 3, 4, 5]
-                                    .swiper-slide
+                        #slider-room
+                            each val in [1, 2, 3, 4, 5, 6, 7]
+                                .slide-room(style="background-image: url('images/room1.jpg')")
+                                    .slider-room-content
+                                        h4= 'Sala de Reuniones ' + val
+                                        p AFORO: 15 Personas
+                        #slider-room-thumbs.d-none.d-md-block
+                            each val in [1, 2, 3, 4, 5, 6, 7]
+                                .slide-thumbmail
+                                    .slide-thumbnail-wrapper
                                         .swiper-slide-thumb(style="background-image: url('images/room1.jpg')")
                 .col-12.col-md-4
                     #feature-event
                         .top-feature-event
                             h4 EVENTOS DESTACADOS
                         .body-feature-event
-                            .boxes-feature-event
+                            #event-container.boxes-feature-event
                                 each val in [1, 2, 3]
                                     .box-fetaure-event
                                         .box-top-feature

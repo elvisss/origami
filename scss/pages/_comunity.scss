@@ -132,8 +132,11 @@
     width: 100%;
     @include media-breakpoint-up(md) {
         margin-bottom: 100px;
+        .slick-arrow {
+            display: none;
+        }
     }
-    .swiper-button-prev, .swiper-button-next {
+    .slick-prev, .slick-next {
         height: 25px;
         top: 125px;
         margin-top: -12.5px;
@@ -146,23 +149,23 @@
     @include media-breakpoint-up(lg) {
         padding: 0 120px;
     }
-    .swiper-button-prev, .swiper-button-next {
+    .slick-prev, .slick-next {
         height: 20px;
         top: 50px;
         margin-top: -10px;
     }
-    .swiper-button-prev {
-        left: 0;
+    .slick-prev {
+        left: -120px;
     }
-    .swiper-button-next {
-        right: 0;
+    .slick-next {
+        right: -120px;
     }
     &:after {
         content: "";
         left: 0;
         right: 0;
         top: 50px;
-        border-bottom: 1px solid $oc-black;
+        border-bottom: 1px dashed $oc-black;
         position: absolute;
     }
 }
@@ -171,16 +174,27 @@
     height: 150px;
     box-sizing: border-box;
     position: relative;
-    .thumb-feed {
-        width: 25%;
-        height: 96px;
-        &.swiper-slide-active {
-            .feed-thumb-content {
-                .feed-thumb-img {
-                    background-color: $oc-yellow;
+    .slick-list {
+        z-index: 3;
+    }
+    .slick-slide {
+        .feed-thumb-img {
+            img {
+                filter: #{"grayscale(100%)"};
+            }
+        }
+        &.slick-current {
+            .feed-thumb-img {
+                img {
+                    filter: #{"grayscale(0%)"};
                 }
             }
         }
+    }
+    .thumb-feed {
+        width: 25%;
+        height: 150px;
+        outline: medium none;
         .feed-thumb-content {
             max-width: 116px;
             margin: 0 auto;
@@ -189,7 +203,8 @@
                 width: 96px;
                 height: 96px;
                 padding: 5px;
-                background-color: $oc-gray-thin;
+                background-color: $oc-yellow;
+                margin: 0 auto;
                 img {
                     width: 100%;
                 }
@@ -204,11 +219,5 @@
                 }
             }
         }
-    }
-    .swiper-slide-active {
-        opacity: 1;
-    }
-    .swiper-wrapper{
-      margin-left: -37.5%;
     }
 }

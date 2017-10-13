@@ -49,5 +49,10 @@ $(function(){
     swiper.slideTo(slide)
   });
 
+  $("#feature-container").mCustomScrollbar({
+    theme:"rounded-dots",
+    scrollInertia:400
+  });
+
 });
 
