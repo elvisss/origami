@@ -6,7 +6,7 @@ $(function(){
 $('#gallery-comunity').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
-  // arrows: false,
+  arrows: false,
   // fade: true,
   asNavFor: '#gallery-comunity-thumbs'
 });

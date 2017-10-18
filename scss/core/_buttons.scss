@@ -36,6 +36,9 @@
         border-radius: 10px;
       }
     }
+    &.no-br {
+      border-radius: 0;
+    }
   }
   &.btn-social {
     color: white;

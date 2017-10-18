@@ -28,16 +28,21 @@ footer#main-footer
 										a(href="http://www.origamicowork.com") origamicowork.com
 				.col-12.col-md-3.d-none.d-md-block
 					.social-content.d-flex.align-items-center.justify-content-center
-						.social-links
-							a.social-link(href="#",target="_blank")
-								i.fa.fa-facebook
-							a.social-link(href="#",target="_blank")
-								i.fa.fa-twitter
-							a.social-link(href="#",target="_blank")
-								i.fa.fa-instagram
-							a.social-link(href="#",target="_blank")
-								i.fa.fa-linkedin
-							a.social-link(href="#",target="_blank")
-								i.fa.fa-google-plus
+						ul.social-links
+							li.fa.fa-facebook
+								a(href="#",target="_blank")
+									| facebook
+							li
+								a(href="#",target="_blank")
+									i.fa.fa-twitter
+							li
+								a(href="#",target="_blank")
+									i.fa.fa-instagram
+							li
+								a(href="#",target="_blank")
+									i.fa.fa-linkedin
+							li
+								a(href="#",target="_blank")
+									i.fa.fa-google-plus
 
 include ./scripts.pug

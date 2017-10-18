@@ -22,7 +22,30 @@
 				padding: 0;
 			}
 			ul.navbar-nav {
-				padding: 35px 0 0;
+				@include media-breakpoint-up(md) {
+					padding: 35px 0 0;
+				}
+			}
+		}
+		.menu-logo {
+			margin-bottom: 25px;
+			padding-top: 35px;
+			text-align: center;
+			@include media-breakpoint-up(md) {
+				padding-top: 0;
+				margin-bottom: 0;
+				left: 20px;
+				position: absolute;
+				top: 0;
+			}
+			@include media-breakpoint-up(lg) {
+				left: 100px
+			}
+			.link-logo {
+				padding: 0;
+				img, svg {
+					width: 116px;
+				}
 			}
 		}
 	}

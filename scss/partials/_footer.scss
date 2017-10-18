@@ -70,26 +70,8 @@
 			@include media-breakpoint-up(lg) {
 				width: 156px;
 			}
-			.social-link {
-				display: inline-block;
-				height: 40px;
-				width: 40px;
-				border-radius: 50%;
-				background-color: $oc-yellow;
-				margin: 6px;
-				text-align: center;
-				@include transition(.5s);
-				i {
-					color: black;
-					font-size: 25px;
-					line-height: 40px;
-				}
-				&:hover {
-					background-color: $oc-black;
-					i {
-						color: $oc-yellow;
-					}
-				}
+			li {
+				margin: 6px 4px;
 			}
 		}
 	}

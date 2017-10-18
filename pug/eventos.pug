@@ -16,7 +16,7 @@ html(lang='es')
                                             .feature-bg(style="background-image: url('./images/feature-1.jpg')")
                                             .feature-links
                                                 .wrap-feature-links
-                                                    a.btn.btn-main(href="#") Me apunto
+                                                    a.btn.btn-main(href="#", data-toggle="modal", data-target='.me-apunto') Me apunto
                                                     a.btn.btn-main.btn-inverse(href="#", data-toggle="modal", data-target='.event-1') Ver más
                                             .feature-body.d-block.d-md-none
                                                 h2 Anger Manegement secrets with Dr. Bruce Banner
@@ -105,7 +105,8 @@ html(lang='es')
                                                     p Viernes, 8 de Setiembre - 19:30 - 19:45 hrs.
                                         .event-content
                                             h4 lorem ipsum
-                                            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            .box-event-content
+                                                | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                                 | tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                                                 | quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                                                 | consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
@@ -121,6 +122,32 @@ html(lang='es')
                                                 | Share
 
 
+        .modal.fade.me-apunto(tabindex='-1', role='dialog', aria-hidden='true')
+            .modal-dialog
+                .modal-content
+                    .modal-body
+                        button.close(type='button', data-dismiss='modal', aria-label='Close')
+                            span(aria-hidden='true') ×
+                        .modal-content-apunto
+                            form#me-apunto-form.full-contact
+                                .top-me-apunto
+                                    h4 Estas a un paso
+                                .body-me-apunto
+                                    .row
+                                        .form-group.col-md-6
+                                            label.form-control-label(for="form-name") nombre
+                                            input#form-name.form-control.control-gray(type="text",placeholder="",required="required")
+                                        .form-group.col-md-6
+                                            label.form-control-label(for="form-last-name") apellido
+                                            input#form-last-name.form-control.control-gray(type="email",placeholder="",required="required")
+                                        .form-group.col-md-6
+                                            label.form-control-label(for="form-email") e-mail
+                                            input#form-email.form-control.control-gray(type="email",placeholder="",required="required")
+                                        .form-group.col-md-6
+                                            label.form-control-label(for="form-phone") teléfono
+                                            input#form-phone.form-control.control-gray(type="tel",placeholder="",required="required")
+                                        .col-12.mt-3
+                                            button#form-submit.btn.btn-block.btn-button.btn-main.no-br(type="submit") enviar
 
 
         include includes/footer.pug

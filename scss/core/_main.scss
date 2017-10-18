@@ -106,11 +106,21 @@ a {
   &.control-transparent {
     background-color: transparent;
     border-color: transparent;
+    font-family: $font-family-antonio;
     border-bottom: 1px solid rgba(white, .5);
     color: white;
-    font-family: $font-family-antonio;
     &:focus {
       outline: 1px solid rgba(white, .5);
+    }
+  }
+  &.control-gray {
+    background-color: transparent;
+    border-color: transparent;
+    font-family: $font-family-antonio;
+    border-bottom: 1px solid rgba(black, .5);
+    color: $oc-black;
+    &:focus {
+      outline: 1px solid rgba(black, .5);
     }
   }
 }
