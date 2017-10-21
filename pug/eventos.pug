@@ -7,33 +7,34 @@ html(lang='es')
         section.fluid-secion
             .container
                 #events-section
-                    .row.no-gutters
-                        .feature-events.col-12.col-md-8
+                    .main-events-section
+                        .row.no-gutters
                             #events-slider.swiper-container.swiper-button-white
                                 .swiper-wrapper
-                                    each val in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+                                    each val in ['./images/evento4.jpg', './images/feature-1.jpg', './images/evento5.jpg', './images/feature-1.jpg', './images/evento4.jpg']
                                         .swiper-slide
-                                            .feature-bg(style="background-image: url('./images/feature-1.jpg')")
+                                            - var img = 'background-image: url(' + val + ')'
+                                            .feature-bg(style=img)
                                             .feature-links
                                                 .wrap-feature-links
-                                                    a.btn.btn-main(href="#", data-toggle="modal", data-target='.me-apunto') Me apunto
+                                                    a.btn.btn-main.js-set-evento(href="#", data-event-name="val", data-event-date="val + 1", data-toggle="modal", data-target='.me-apunto') Me apunto
                                                     a.btn.btn-main.btn-inverse(href="#", data-toggle="modal", data-target='.event-1') Ver más
                                             .feature-body.d-block.d-md-none
                                                 h2 Anger Manegement secrets with Dr. Bruce Banner
                                                 a(href="#").date Martes 9 de setiembre
                                 .swiper-button-next
                                 .swiper-button-prev
-                        #list-events.col-12.col-md-4.d-none.d-md-block
-                            .wrap-list-events
-                                .main-list-events
-                                    #feature-container.cont-list-events
-                                        #boxes-list-events
-                                            .slidee
-                                                each val in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
-                                                    .box-list-event(data-slide= "slide-" + val, class=val == 1 ? "event-active" : "")
-                                                        h2
-                                                            a(href="#") Anger Manegement secrets with Dr. Bruce Banner
-                                                        a(href="#").date Martes 9 de setiembre
+                            #list-events.col-12.col-md-4.d-none.d-md-block.ml-auto
+                                .wrap-list-events
+                                    .main-list-events
+                                        #feature-container.cont-list-events
+                                            #boxes-list-events
+                                                .slidee
+                                                    each val in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+                                                        .box-list-event(data-slide= "slide-" + val, class=val == 1 ? "event-active" : "")
+                                                            h2
+                                                                a(href="#") Anger Manegement secrets with Dr. Bruce Banner
+                                                            a(href="#").date Martes 9 de setiembre
 
         section.fluid-section
             .container
@@ -133,6 +134,8 @@ html(lang='es')
                                 .top-me-apunto
                                     h4 Estas a un paso
                                 .body-me-apunto
+                                    input#form-evento-name(type="hidden",value="")
+                                    input#form-evento-date(type="hidden",value="")
                                     .row
                                         .form-group.col-md-6
                                             label.form-control-label(for="form-name") nombre

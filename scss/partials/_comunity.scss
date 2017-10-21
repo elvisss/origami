@@ -46,6 +46,17 @@
                 width: 350px;
                 height: 300px;
                 position: relative;
+                &-active {
+                    &:after {
+                        @include linear-gradient(rgba(0,0,0,0), black);
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        height: 120px;
+                    }
+                }
                 .slider-room-content {
                     text-align: center;
                     position: absolute;
@@ -53,6 +64,7 @@
                     right: 0;
                     bottom: 25px;
                     padding: 0 40px;
+                    z-index: 1;
                     p, h3 {
                         color: white;
                     }
@@ -73,6 +85,9 @@
                             // color: white;
                         }
                     }
+                }
+                .swiper-slide-shadow-left, .swiper-slide-shadow-right {
+                    background-color: rgba(66, 66, 66, 0.8);
                 }
             }
         }

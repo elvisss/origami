@@ -97,16 +97,21 @@
 		}
 	}
 	.content-plan {
+		border: medium none;
 		border-bottom: 2px solid white;
 		@include media-breakpoint-up(md) {
 			border-right: 1px dashed $oc-gray-dark;
 			border-bottom: medium none;
-			&:last-child {
-				border-right: medium none;
-			}
+			// &:last-child {
+			// 	border-right: medium none;
+			// }
+		}
+		&.order-md-3 {
+			border-right: medium none;
 		}
 		&.card {
 			background-color: transparent;
+			border-radius: 0;
 			.card-header {
 				text-align: center;
 			}

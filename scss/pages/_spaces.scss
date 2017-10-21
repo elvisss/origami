@@ -142,13 +142,20 @@ $base-spacing: 1.5em;
             height: 100%;
             img, svg {
               height: 100%;
+              fill: $oc-black;
+              @include media-breakpoint-up(md) {
+                fill: white;
+              }
             }
           }
           .property-desc {
             margin-left: 110px;
             height: 100%;
             p {
-              color: white;
+              color: $oc-black;
+              @include media-breakpoint-up(md) {
+                color: white;
+              }
               font-family: $font-family-antonio;
               font-size: 13px;
             }

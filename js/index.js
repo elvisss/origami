@@ -51,7 +51,7 @@ $('#slider-room-thumbs').slick({
 var comunitySwiper = new Swiper('#comunity-slider', {
 	nextButton: '#comunity-section .swiper-button-next',
 	prevButton: '#comunity-section .swiper-button-prev',
-  autoplay: 3000,
+  // autoplay: 3000,
   effect: 'coverflow',
   grabCursor: true,
   centeredSlides: true,

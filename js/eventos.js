@@ -32,6 +32,7 @@ $(function(){
     nextButton: '.swiper-button-next',
     prevButton: '.swiper-button-prev',
     followFinger: false,
+    effect: 'fade',
     freeMode: true,
     breakpoints: {
       768: {
@@ -52,6 +53,11 @@ $(function(){
   $("#feature-container").mCustomScrollbar({
     theme:"rounded-dots",
     scrollInertia:400
+  });
+
+  $('.js-set-evento').on('click', function() {
+    $('#form-evento-name').val($(this).data('event-name'));
+    $('#form-evento-date').val($(this).data('event-date'));
   });
 
 });

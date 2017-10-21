@@ -1,0 +1,35 @@
+$fill1: #FFD923;
+$fill2: #FEE300;
+$fill3: #FFD700;
+$fill4: #F8EB60;
+$fill5: #F0D800;
+$fill6: #010300;
+$fill-text-white: white;
+$fill-text-dark: #120C08;
+
+.menu-logo {
+  .logo-fill-1 {
+    fill: $fill1;
+  }
+  .logo-fill-2 {
+    fill: $fill2;
+  }
+  .logo-fill-3 {
+    fill: $fill3;
+  }
+  .logo-fill-4 {
+    fill: $fill4;
+  }
+  .logo-fill-5 {
+    fill: $fill5;
+  }
+  .logo-fill-6 {
+    fill: $fill6;
+  }
+  .logo-text {
+    fill: $fill-text-white;
+    @include media-breakpoint-up(md) {
+      fill: $fill-text-dark;
+    }
+  }
+}

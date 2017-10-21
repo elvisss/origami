@@ -1,1 +1,1 @@
-$(function(){$(".navbar-custom li:nth-child(8)").addClass("nav-active")});
+$(function(){$(".navbar-custom li:nth-child(8)").addClass("nav-active"),$("#form-for-who").change(function(){"2"==$(this).val()?$(".js-business").hide():$(".js-business").show()})});

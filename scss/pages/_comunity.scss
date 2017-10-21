@@ -131,7 +131,7 @@
 #gallery-comunity {
     width: 100%;
     @include media-breakpoint-up(md) {
-        margin-bottom: 100px;
+        margin-bottom: 55px;
         .slick-arrow {
             display: none !important;
         }
@@ -162,8 +162,8 @@
     }
     &:after {
         content: "";
-        left: 0;
-        right: 0;
+        left: 12px;
+        right: 12px;
         top: 50px;
         border-bottom: 1px dashed $oc-black;
         position: absolute;

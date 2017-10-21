@@ -4,7 +4,7 @@ html(lang='es')
     body
         include includes/header.pug
 
-        section#contact-section.min-full-section
+        section#contact-section.fluid-section
             .bg-contact
                 .d-table
                     .d-table-cell
@@ -29,9 +29,9 @@ html(lang='es')
                                             .form-group.col-md-6
                                                 label.form-control-label(for="form-for-who") ¿para quién lo hace?
                                                 select#form-for-who.form-control.control-transparent(required="required")
-                                                    option 1
-                                                    option 2
-                                            .form-group.col-md-6
+                                                    option(val="1") 1
+                                                    option(val="2") 2
+                                            .form-group.col-md-6.js-business
                                                 label.form-control-label(for="form-business") nombre de la empresa
                                                 input#form-business.form-control.control-transparent(type="text",placeholder="",required="required")
                                             .form-group.col-md-6

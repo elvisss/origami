@@ -178,15 +178,3 @@ select {
     }
   }
 }
-
-.menu-logo {
-  .logo-fill {
-    fill: $oc-yellow;
-  }
-  .logo-text {
-    fill: white;
-    @include media-breakpoint-up(md) {
-      fill: black;
-    }
-  }
-}
