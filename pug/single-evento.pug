@@ -1,0 +1,51 @@
+doctype html
+html(lang='es')
+    include includes/head.pug
+    body
+        include includes/header.pug
+
+        section.fluid-secion
+            .container
+                #events-section
+                    .modal-content-event
+                        .row.no-gutters
+                            .col-12.col-lg-6
+                                .modal-event-bg(style="background-image: url('./images/modal-event1.jpg')")
+                            .col-12.col-lg-6
+                                .wrap-content-event
+                                    .event-title
+                                        h2 Anger Manegement secrets with Dr. Bruce Banner
+                                    .event-info
+                                        .box-event-info
+                                            .info-img.d-none.d-md-block
+                                                i.fa.fa-map-marker
+                                            .info-content
+                                                p
+                                                    b Origami - Auditorio SUM
+                                                p (Av. Contralmirante Montero 421-13D. Magdalena del Mar)
+                                        .box-event-info
+                                            .info-img.d-none.d-md-block
+                                                i.fa.fa-clock-o
+                                            .info-content
+                                                p Viernes, 8 de Setiembre - 19:30 - 19:45 hrs.
+                                    .event-content
+                                        h4 lorem ipsum
+                                        .box-event-content
+                                            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                            | tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                            | quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                            | consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                            | cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                            | proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                    .event-social
+                                        a.btn.btn-main(href="#") Me apunto
+                                        a.btn.btn-social.btn-facebook(href="#")
+                                            i.fa.fa-facebook
+                                            | Share
+                                        a.btn.btn-social.btn-twitter(href="#")
+                                            i.fa.fa-twitter
+                                            | Share
+
+
+        include includes/footer.pug
+        script(src="js/single-event.js",type="text/javascript")

@@ -1,6 +1,9 @@
 .me-apunto {
 	.modal-content-apunto {
 		padding: 20px 30px;
+		div.wpcf7-validation-errors {
+			color: $oc-black;
+		}
 	}
 }
 

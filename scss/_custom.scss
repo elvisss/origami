@@ -1,6 +1,6 @@
 $datepicker-head: #0c0c0c;
 $datepicker-date: #f2f3f3;
-$datepicker-first-column: #272525;
+$datepicker-highlighted: #272525;
 $datepicker-other-day: #dbdcdd;
 $datepicker-event-day: #fbf49b;
 $datepicker-active: #204d74;
@@ -44,8 +44,8 @@ $datepicker-active: #204d74;
                             background-color: $datepicker-active;
                             color: white;
                         }
-                        &:first-child {
-                            background-color: $datepicker-first-column;
+                        &.highlighted {
+                            background-color: $datepicker-highlighted;
                             color: white;
                         }
                     }

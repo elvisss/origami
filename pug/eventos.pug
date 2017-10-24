@@ -42,7 +42,14 @@ html(lang='es')
                     .row.no-gutters
                         #main-events.col-12.col-md-8
                             .top-main-events
-                                h3 EVENTOS DEL MES
+                                .title-month
+                                    h3 EVENTOS DEL MES
+                                .months-carousel.d-block.d-md-none
+                                    .title-carousel
+                                        h4 09
+                                            span SETIEMBRE
+                                    a(href="#").arrow-month.arrow-month_left
+                                    a(href="#").arrow-month.arrow-month_right
                             .body-main-events
                                 each val in [1, 2, 1, 2, 1]
                                     .main-event

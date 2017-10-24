@@ -79,13 +79,15 @@
 	&:after {
 		content: "";
 		position: absolute;
-		left: -200px;
-		right: -75px;
+		left: 0;
+		right: 0;
 		bottom: 0;
 		top: 0;
 		background-color: $oc-yellow;
 		z-index: 1;
 		@include media-breakpoint-up(md) {
+			left: -200px;
+			right: -75px;
 			@include transform(skew(-30deg));
 		}
 	}
