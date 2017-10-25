@@ -48,7 +48,7 @@
                 position: relative;
                 &-active {
                     &:after {
-                        @include linear-gradient(rgba(0,0,0,0), black);
+                        @include linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.6));
                         content: "";
                         position: absolute;
                         left: 0;
@@ -73,6 +73,7 @@
                         font-family: $font-family-roboto-italic;
                     }
                     h3 {
+                        margin-top: 8px;
                         font-size: 18px;
                         font-family: $font-family-antonio-bold;
                     }

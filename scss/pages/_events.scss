@@ -25,10 +25,13 @@
 	}
 	.swiper-wrapper {
 		.swiper-slide {
-			height: 100%;
-			background-color: $oc-light-blue;
+			height: 290px;
+			background-color: white;
+			@include media-breakpoint-up(md) {
+				height: 100%;
+			}
 			.feature-bg {
-				height: 250px;
+				height: 235px;
 				background-repeat: no-repeat;
 				background-position: center;
 				background-size: cover;
@@ -48,13 +51,14 @@
 			}
 			.feature-links {
 				text-align: center;
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: 55px;
 				@include media-breakpoint-up(md) {
+					bottom: 0;
 					height: 70px;
 					text-align: left;
-					position: absolute;
-					left: 0;
-					right: 0;
-					bottom: 0;
 				}
 				.wrap-feature-links {
 					padding: 10px 0;
@@ -71,8 +75,12 @@
 			}
 			.feature-body {
 				text-align: center;
-				padding: 15px 0;
+				padding: 15px 0 5px;
 				background-color: white;
+				height: 35px;
+				@include media-breakpoint-up(md) {
+					padding: 15px 0;
+				}
 				h2 {
 					font-size: 12px;
 					font-family: $font-family-antonio-bold;

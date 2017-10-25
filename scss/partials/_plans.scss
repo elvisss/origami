@@ -102,9 +102,6 @@
 		@include media-breakpoint-up(md) {
 			border-right: 1px dashed $oc-gray-dark;
 			border-bottom: medium none;
-			// &:last-child {
-			// 	border-right: medium none;
-			// }
 		}
 		&.order-md-3 {
 			border-right: medium none;
@@ -120,6 +117,7 @@
 	.box-plan {
 		padding: 20px 50px;
 		text-align: center;
+		color: $oc-black;
 		.plan-content-price {
 			margin-bottom: 7px;
 			.plan-price {
