@@ -57,32 +57,29 @@ ul {
 		li {
 			display: inline-block;
 			margin: 0 5px;
-			position: relative;
-			background-color: $oc-yellow;
-			border-radius: 50%;
 			font-size: 25px;
 			line-height: 40px;
-			@include transition(.5s);
 			text-align: center;
-			&:before {
-				color: $oc-black;
-				position: absolute;
-				right: 0;
-				top: 0;
-				left: 0;
-				bottom: 0;
-			}
+			// background-color: $oc-yellow;
 			a {
+				@include transition(.5s);
+				background-color: $oc-black;
 				display: block;
 				height: 40px;
 				width: 40px;
 				text-indent: -9999px;
 				position: relative;
-			}
-			&:hover {
-				background-color: $oc-black;
-				&:before {
-					color: $oc-yellow;
+				background-repeat: no-repeat;
+				border-radius: 50%;
+				img, svg {
+					display: block;
+					.fill-social {
+						@include transition(.5s);
+						fill: $oc-yellow;
+					}
+				}
+				&:hover {
+					opacity: .7;
 				}
 			}
 		}
