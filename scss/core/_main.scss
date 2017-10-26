@@ -146,8 +146,9 @@ select {
 
 .modal-body {
   .close-modal {
-      float: right;
-      position: relative;
+      position: absolute;
+      right: 20px;
+      top: 20px;
       width: 20px;
       height: 20px;
       cursor: pointer;
