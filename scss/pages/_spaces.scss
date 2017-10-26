@@ -95,6 +95,16 @@ $base-spacing: 1.5em;
   }
 }
 
+.spaces-modal {
+  .modal-body {
+    .close-modal {
+      .horizontal, .vertical {
+        background-color: white;
+      }
+    }
+  }
+}
+
 .spaces-wrapper-content {
   .space-desc {
     background-color: $oc-yellow;

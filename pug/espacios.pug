@@ -29,8 +29,9 @@ html(lang='es')
                 .modal-dialog.full-modal
                     .modal-content
                         .modal-body
-                            button.close(type='button', data-dismiss='modal', aria-label='Close')
-                                span(aria-hidden='true') ×
+                            .close-modal(data-dismiss="modal", aria-label="Close")
+                                .horizontal
+                                .vertical
                             .modal-full-content.spaces-wrapper-content
                                 .spaces-slider.swiper-container.swiper-button-white(id="space-slider-" + number)
                                     .swiper-wrapper
