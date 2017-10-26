@@ -144,6 +144,38 @@ select {
   }
 }
 
+.modal-body {
+  .close-modal {
+      float: right;
+      position: relative;
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      .horizontal {
+        @include transform(rotate(-45deg));
+        position: absolute;
+        background-color: $oc-black;
+        width: 20px;
+        height: 2px;
+        left: 50%;
+        margin-left: -10px;
+        top: 50%;
+        margin-top: -1px;
+      }
+      .vertical {
+        @include transform(rotate(-45deg));
+        position: absolute;
+        background-color: $oc-black;
+        width: 2px;
+        height: 20px;
+        left: 50%;
+        margin-left: -1px;
+        top: 50%;
+        margin-top: -10px;
+      }
+  }
+}
+
 .modal-dialog {
   &.full-modal {
     height: auto;

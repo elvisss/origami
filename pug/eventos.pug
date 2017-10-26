@@ -88,8 +88,11 @@ html(lang='es')
             .modal-dialog.modal-lg.modal-xl
                 .modal-content
                     .modal-body
-                        button.close(type='button', data-dismiss='modal', aria-label='Close')
-                            span(aria-hidden='true') ×
+                        .close-modal(data-dismiss='modal', aria-label='Close')
+                            .horizontal
+                            .vertical
+                        //- button.close(type='button', data-dismiss='modal', aria-label='Close')
+                        //-     span(aria-hidden='true') ×
                         .modal-content-event
                             .row.no-gutters
                                 .col-12.col-lg-6
@@ -134,8 +137,9 @@ html(lang='es')
             .modal-dialog
                 .modal-content
                     .modal-body
-                        button.close(type='button', data-dismiss='modal', aria-label='Close')
-                            span(aria-hidden='true') ×
+                        .close-modal(data-dismiss='modal', aria-label='Close')
+                            .horizontal
+                            .vertical
                         .modal-content-apunto
                             form#me-apunto-form.full-contact
                                 .top-me-apunto
