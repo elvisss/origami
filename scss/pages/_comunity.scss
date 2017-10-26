@@ -65,9 +65,12 @@
                 .feed-top {
                     margin-bottom: 15px;
                     h2 {
-                        font-family: $font-family-high-tide;
-                        font-size: 50px;
+                        font-family: $font-family-javacom;
+                        font-size: 30px;
                         color: black;
+                        @include media-breakpoint-up(md) {
+                            font-size: 40px;
+                        }
                     }
                     @include media-breakpoint-up(md) {
                         margin-bottom: 30px;

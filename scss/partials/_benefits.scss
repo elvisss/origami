@@ -4,14 +4,14 @@
 			padding-top: 30px;
 			text-align: center;
 			h2 {
-				font-family: $font-family-high-tide;
-				font-size: 35px;
+				font-family: $font-family-javacom;
+				font-size: 20px;
 				color: black;
 			}
 			@include media-breakpoint-up(lg) {
 				padding-top: 60px;
 				h2 {
-					font-size: 54px;
+					font-size: 40px;
 				}
 			}
 		}
