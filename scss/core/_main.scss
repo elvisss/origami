@@ -51,6 +51,7 @@ a {
   height: 100%;
   width: 100%;
   position: relative;
+  overflow-x: hidden;
   .bg-full-section {
     background-position: top center;
     background-size: cover;
@@ -76,10 +77,11 @@ a {
   }
 }
 
-.fluid-secion {
+.fluid-section {
   height: auto;
   width: 100%;
   position: relative;
+  overflow-x: hidden;
 }
 
 .swiper-container {
