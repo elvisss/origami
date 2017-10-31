@@ -127,6 +127,14 @@ a {
   }
 }
 
+textarea {
+  &.form-control {
+    &.control-transparent {
+      border: 1px solid rgba(white, .5);
+    }
+  }
+}
+
 select {
   &.form-control {
     -webkit-appearance: none;

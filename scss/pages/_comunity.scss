@@ -143,6 +143,9 @@
         height: 25px;
         top: 125px;
         margin-top: -12.5px;
+        &:before {
+            content: "";
+        }
     }
 }
 
@@ -157,6 +160,9 @@
         top: 50px;
         margin-top: -10px;
         outline: medium none;
+        &:before {
+            content: "";
+        }
     }
     .slick-prev {
         left: -120px;

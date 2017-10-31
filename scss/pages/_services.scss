@@ -10,12 +10,12 @@
 		h2 {
 			color: black;
 			font-family: $font-family-antonio-bold;
-			font-size: 15px;
+			font-size: 18px;
 			margin-bottom: 5px;
 		}
 		p {
 			color: black;
-			font-size: 11px;
+			font-size: 14px;
 			font-family: $font-family-antonio;
 		}
 		@include media-breakpoint-up(md) {

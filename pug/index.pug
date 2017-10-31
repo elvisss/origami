@@ -198,8 +198,9 @@ html(lang='es')
                     #comunity-slider.swiper-container
                         .swiper-wrapper
                             each val in [1, 2, 3, 4, 5]
-                                .swiper-slide(style="background-image: url('images/comunity1.jpg')")
-                                    .slider-room-content
+                                .swiper-slide
+                                    .swiper-comunity-bg(style="background-image: url('images/comunity1.jpg')")
+                                    .slider-comunity-content
                                         p “Dolor sit amet, consectetur adipisc elit, sed do eiusmod tempor dunt ut labore et dolore magna aliqua.
                                         h3 LOREM IPSUM
                 .swiper-button-next.swiper-button-black
