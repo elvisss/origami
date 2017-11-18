@@ -138,7 +138,11 @@
               <div class="swiper-container swiper-button-white" id="events-slider">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    <div class="feature-bg" style="background-image: url(./images/evento4.jpg);"></div>
+                    <figure class="feature-bg">
+                      <picture>
+                        <source srcset="./images/evento_horizontal.png" media="(min-width: 768px)"><img srcset="./images/evento_vertical.jpg">
+                      </picture>
+                    </figure>
                     <div class="feature-links">
                       <div class="wrap-feature-links"><a class="btn btn-main js-set-evento" href="#" data-event-name="val" data-event-date="val + 1" data-toggle="modal" data-target=".me-apunto">Me apunto</a><a class="btn btn-main btn-inverse" href="#" data-toggle="modal" data-target=".event-1">Ver más</a></div>
                     </div>
@@ -147,7 +151,11 @@
                     </div>
                   </div>
                   <div class="swiper-slide">
-                    <div class="feature-bg" style="background-image: url(./images/feature-1.jpg);"></div>
+                    <figure class="feature-bg">
+                      <picture>
+                        <source srcset="./images/feature-1.jpg" media="(min-width: 768px)"><img srcset="./images/evento_vertical.jpg">
+                      </picture>
+                    </figure>
                     <div class="feature-links">
                       <div class="wrap-feature-links"><a class="btn btn-main js-set-evento" href="#" data-event-name="val" data-event-date="val + 1" data-toggle="modal" data-target=".me-apunto">Me apunto</a><a class="btn btn-main btn-inverse" href="#" data-toggle="modal" data-target=".event-1">Ver más</a></div>
                     </div>
@@ -156,7 +164,11 @@
                     </div>
                   </div>
                   <div class="swiper-slide">
-                    <div class="feature-bg" style="background-image: url(./images/evento5.jpg);"></div>
+                    <figure class="feature-bg">
+                      <picture>
+                        <source srcset="./images/evento5.jpg" media="(min-width: 768px)"><img srcset="./images/evento_vertical.jpg">
+                      </picture>
+                    </figure>
                     <div class="feature-links">
                       <div class="wrap-feature-links"><a class="btn btn-main js-set-evento" href="#" data-event-name="val" data-event-date="val + 1" data-toggle="modal" data-target=".me-apunto">Me apunto</a><a class="btn btn-main btn-inverse" href="#" data-toggle="modal" data-target=".event-1">Ver más</a></div>
                     </div>
@@ -165,7 +177,11 @@
                     </div>
                   </div>
                   <div class="swiper-slide">
-                    <div class="feature-bg" style="background-image: url(./images/feature-1.jpg);"></div>
+                    <figure class="feature-bg">
+                      <picture>
+                        <source srcset="./images/feature-1.jpg" media="(min-width: 768px)"><img srcset="./images/evento_vertical.jpg">
+                      </picture>
+                    </figure>
                     <div class="feature-links">
                       <div class="wrap-feature-links"><a class="btn btn-main js-set-evento" href="#" data-event-name="val" data-event-date="val + 1" data-toggle="modal" data-target=".me-apunto">Me apunto</a><a class="btn btn-main btn-inverse" href="#" data-toggle="modal" data-target=".event-1">Ver más</a></div>
                     </div>
@@ -174,7 +190,11 @@
                     </div>
                   </div>
                   <div class="swiper-slide">
-                    <div class="feature-bg" style="background-image: url(./images/evento4.jpg);"></div>
+                    <figure class="feature-bg">
+                      <picture>
+                        <source srcset="./images/evento4.jpg" media="(min-width: 768px)"><img srcset="./images/evento_vertical.jpg">
+                      </picture>
+                    </figure>
                     <div class="feature-links">
                       <div class="wrap-feature-links"><a class="btn btn-main js-set-evento" href="#" data-event-name="val" data-event-date="val + 1" data-toggle="modal" data-target=".me-apunto">Me apunto</a><a class="btn btn-main btn-inverse" href="#" data-toggle="modal" data-target=".event-1">Ver más</a></div>
                     </div>
@@ -267,7 +287,7 @@
       <div class="container">
         <div class="container-events">
           <div class="row no-gutters">
-            <div class="col-12 col-md-8" id="main-events">
+            <div class="col-12 col-lg-8" id="main-events">
               <div class="top-main-events">
                 <div class="title-month">
                   <h3>EVENTOS DEL MES</h3>
@@ -376,15 +396,13 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-md-4 d-none d-md-block">
+            <div class="col-12 col-lg-4">
               <aside id="main-sidebar">
-                <div class="aside-block">
+                <div class="aside-block d-none d-lg-block">
                   <div id="datepicker"></div>
                   <input id="my_hidden_input" type="hidden">
                 </div>
-                <div class="aside-block">
-                  <div style="height: 700px; width: 100%; background-color: #d1d1d1;"></div>
-                </div>
+                <div class="aside-block"><a href="#" target="_blank"><img width="100%" src="./images/evento_vertical.jpg"></a></div>
               </aside>
             </div>
           </div>
@@ -401,10 +419,10 @@
             </div>
             <div class="modal-content-event">
               <div class="row no-gutters">
-                <div class="col-12 col-lg-6">
-                  <div class="modal-event-bg" style="background-image: url('./images/modal-event1.jpg');"></div>
+                <div class="col-12 col-xl-6">
+                  <figure class="modal-event-bg"><img src="./images/evento_vertical.jpg"></figure>
                 </div>
-                <div class="col-12 col-lg-6">
+                <div class="col-12 col-xl-6">
                   <div class="wrap-content-event">
                     <div class="event-title">
                       <h2>Anger Manegement secrets with Dr. Bruce Banner</h2>

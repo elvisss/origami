@@ -29,8 +29,16 @@
         background-color: rgba(white, .8);
       }
     }
-    &.btn-sm {
+    &.btn-md {
       @include media-breakpoint-down(md) {
+        font-size: 10px;
+        padding: 0 20px;
+        line-height: 20px;
+        border-radius: 10px;
+      }
+    }
+    &.btn-sm {
+      @include media-breakpoint-down(sm) {
         font-size: 10px;
         padding: 0 20px;
         line-height: 20px;

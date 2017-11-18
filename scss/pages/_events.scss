@@ -25,19 +25,26 @@
 	}
 	.swiper-wrapper {
 		.swiper-slide {
-			height: 290px;
+			height: auto;
 			background-color: white;
 			@include media-breakpoint-up(md) {
 				height: 100%;
 			}
 			.feature-bg {
-				height: 235px;
+				height: auto;
 				background-repeat: no-repeat;
-				background-position: center;
+				background-position: top left;
 				background-size: cover;
 				position: relative;
+				margin: 0;
 				@include media-breakpoint-up(md) {
 					height: 100%;
+				}
+				img {
+					width: 100%;
+					@include media-breakpoint-up(md) {
+						width: auto;
+					}
 				}
 				&:after {
 					position: absolute;
@@ -164,7 +171,7 @@
 
 #main-events {
 	margin: 0 0 25px;
-	@include media-breakpoint-up(md) {
+	@include media-breakpoint-up(lg) {
 		border-right: 1px dashed $oc-black;
 	}
 	.top-main-events {
@@ -354,16 +361,13 @@
 .modal-content-event {
 	background-color: white;
 	padding-top: 30px;
-	@include media-breakpoint-up(md) {
+	@include media-breakpoint-up(xl) {
 		padding-top: 0;
 	}
 	.modal-event-bg {
-		height: 100%;
-		max-height: 750px;
-		min-height: 200px;
-		background-size: cover;
-		background-position: center;
-		background-repeat: no-repeat;
+		img {
+			width: 100%;
+		}
 	}
 	.wrap-content-event {
 		text-align: center;

@@ -9,11 +9,12 @@ html(lang='es')
                 .swiper-wrapper
                     mixin main-slide(title, content)
                         .swiper-slide
-                            .main-banner-bg(style="background-image: url('images/banner1.jpg')")
-                                .main-banner-content
-                                    .pr-4.pl-4
-                                        h3= title
-                                        p= content
+                            figure.main-banner-bg
+                                img(src="images/banner1.jpg")
+                            .main-banner-content
+                                .pr-4.pl-4
+                                    h3= title
+                                    p= content
                     - var n = 0;
                     - var banner = {title: 'LOREM IPSUM LAUDATUM',content: 'dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'}
                     while n < 4

@@ -11,10 +11,12 @@ html(lang='es')
                         .row.no-gutters
                             #events-slider.swiper-container.swiper-button-white
                                 .swiper-wrapper
-                                    each val in ['./images/evento4.jpg', './images/feature-1.jpg', './images/evento5.jpg', './images/feature-1.jpg', './images/evento4.jpg']
+                                    each val in ['./images/evento_horizontal.png', './images/feature-1.jpg', './images/evento5.jpg', './images/feature-1.jpg', './images/evento4.jpg']
                                         .swiper-slide
-                                            - var img = 'background-image: url(' + val + ')'
-                                            .feature-bg(style=img)
+                                            figure.feature-bg
+                                                picture
+                                                    source(srcset=val, media="(min-width: 768px)")
+                                                    img(srcset="./images/evento_vertical.jpg")
                                             .feature-links
                                                 .wrap-feature-links
                                                     a.btn.btn-main.js-set-evento(href="#", data-event-name="val", data-event-date="val + 1", data-toggle="modal", data-target='.me-apunto') Me apunto
@@ -40,7 +42,7 @@ html(lang='es')
             .container
                 .container-events
                     .row.no-gutters
-                        #main-events.col-12.col-md-8
+                        #main-events.col-12.col-lg-8
                             .top-main-events
                                 .title-month
                                     h3 EVENTOS DEL MES
@@ -76,13 +78,14 @@ html(lang='es')
                                                                 | Share
 
 
-                        .col-12.col-md-4.d-none.d-md-block
+                        .col-12.col-lg-4
                             aside#main-sidebar
-                                .aside-block
+                                .aside-block.d-none.d-lg-block
                                     #datepicker
                                     input#my_hidden_input(type="hidden")
                                 .aside-block
-                                    div(style="height: 700px; width: 100%; background-color: #d1d1d1")
+                                    a(href="#", target="_blank")
+                                        img(width="100%",src="./images/evento_vertical.jpg")
 
         .modal.fade.event-modal(tabindex='-1', role='dialog', aria-labelledby='myLargeModalLabel', aria-hidden='true', class='event-1')
             .modal-dialog.modal-lg.modal-xl
@@ -95,9 +98,10 @@ html(lang='es')
                         //-     span(aria-hidden='true') ×
                         .modal-content-event
                             .row.no-gutters
-                                .col-12.col-lg-6
-                                    .modal-event-bg(style="background-image: url('./images/modal-event1.jpg')")
-                                .col-12.col-lg-6
+                                .col-12.col-xl-6
+                                    figure.modal-event-bg
+                                        img(src="./images/evento_vertical.jpg")
+                                .col-12.col-xl-6
                                     .wrap-content-event
                                         .event-title
                                             h2 Anger Manegement secrets with Dr. Bruce Banner

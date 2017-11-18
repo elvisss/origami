@@ -1,7 +1,9 @@
 #main-sidebar {
-	padding-left: 45px;
+	@include media-breakpoint-up(lg) {
+		padding-left: 45px;
+	}
 	.aside-block {
-		margin-top: 20px;
+		margin: 20px 0;
 		&:first-child {
 			margin-top: 0;
 		}

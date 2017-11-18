@@ -1,32 +1,50 @@
 #main-slider {
-    height: 250px;
+    height: auto;
     @include media-breakpoint-up(md) {
         height: 100%;
     }
+    .swiper-slide {
+        overflow: hidden;
+    }
     .main-banner-bg {
         height: 100%;
-        background-size: cover;
-        background-position: top center;
-        background-repeat: no-repeat;
         position: relative;
-        .main-banner-content {
-            position: absolute;
-            bottom: 45px;
+        img {
             width: 100%;
-            color: white;
-            text-align: center;
             @include media-breakpoint-up(md) {
-                text-align: right;
-                right: 100px;
-                width: 550px;
-                bottom: 40px;
+                position: absolute;
+                height: 100%;
+                left: 50%;
+                width: auto;
+                @include transform(translateX(-50%));
             }
+        }
+    }
+    .main-banner-content {
+        position: absolute;
+        bottom: 45px;
+        width: 80%;
+        color: white;
+        text-align: center;
+        left: 10%;
+        h3 {
+            font-family: $font-family-antonio-bold;
+            font-size: 17.5px;
+        }
+        p {
+            font-family: $font-family-antonio;
+            font-size: 12.5px;
+        }
+        @include media-breakpoint-up(md) {
+            text-align: right;
+            right: 100px;
+            width: 550px;
+            left: auto;
+            bottom: 40px;
             h3 {
-                font-family: $font-family-antonio-bold;
                 font-size: 30px;
             }
             p {
-                font-family: $font-family-antonio;
                 font-size: 22.5px;
             }
         }
@@ -48,16 +66,28 @@
         background-repeat: no-repeat;
         position: relative;
         height: 500px;
+        &:after {
+            @include linear-gradient(to top, transparent, rgba(0,0,0,.7));
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 150px;
+            top: 0;
+            z-index: 1;
+        }
         .slider-room-content {
             padding: 50px;
             text-align: right;
-            h4, p {
-                -webkit-text-shadow: 3px 3px 3px rgba(0, 0, 0, 1);
-                -moz-text-shadow: 3px 3px 3px rgba(0, 0, 0, 1);
-                -ms-text-shadow: 3px 3px 3px rgba(0, 0, 0, 1);
-                -o-text-shadow: 3px 3px 3px rgba(0, 0, 0, 1);
-                text-shadow: 3px 3px 3px rgba(0, 0, 0, 1);
-            }
+            position: relative;
+            z-index: 2;
+            // h4, p {
+            //     -webkit-text-shadow: 3px 3px 3px rgba(0, 0, 0, 1);
+            //     -moz-text-shadow: 3px 3px 3px rgba(0, 0, 0, 1);
+            //     -ms-text-shadow: 3px 3px 3px rgba(0, 0, 0, 1);
+            //     -o-text-shadow: 3px 3px 3px rgba(0, 0, 0, 1);
+            //     text-shadow: 3px 3px 3px rgba(0, 0, 0, 1);
+            // }
             h4 {
                 color: #fff;
                 font-family: $font-family-antonio-bold;

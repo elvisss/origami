@@ -23,7 +23,7 @@ $('#slider-room-thumbs').slick({
   arrows: false,
   // centerMode: true,
   focusOnSelect: true,
-  autoplay: true,
+  // autoplay: true,
   autoplaySpeed: 3000,
 });
 
