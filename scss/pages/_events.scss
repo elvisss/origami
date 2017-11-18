@@ -42,9 +42,6 @@
 				}
 				img {
 					width: 100%;
-					@include media-breakpoint-up(md) {
-						width: auto;
-					}
 				}
 				&:after {
 					position: absolute;
