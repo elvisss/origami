@@ -48,6 +48,14 @@
 	}
 	.social-links {
 		margin: 10px 0 20px;
+		li {
+			a {
+				background-color: $oc-black-light;
+			}
+		}
+		.fill-text-social {
+			fill: $oc-black-light;
+		}
 	}
 }
 

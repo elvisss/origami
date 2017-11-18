@@ -2,7 +2,7 @@ var mainSwiper = new Swiper('#main-slider', {
   paginationClickable: true,
   nextButton: '.swiper-button-next',
   prevButton: '.swiper-button-prev',
-  autoplay: 3000,
+  // autoplay: 3000,
   autoplayDisableOnInteraction: false,
   loop: true
 });
@@ -64,7 +64,18 @@ var comunitySwiper = new Swiper('#comunity-slider', {
       depth: 300,
       modifier: 1,
       slideShadows : true
-  }
+  },
+  breakpoints: {
+      640: {
+        coverflow: {
+            rotate: 0,
+            stretch: 0,
+            depth: 500,
+            modifier: 1,
+            slideShadows : true
+        }
+      }
+    }
 });
 
 $("#event-container").mCustomScrollbar({

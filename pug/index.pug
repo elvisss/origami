@@ -4,7 +4,7 @@ html(lang='es')
     body
         include includes/header.pug
 
-        section#main-section.full-section
+        section#main-section.fluid-full-section
             #main-slider.swiper-container.swiper-button-white
                 .swiper-wrapper
                     mixin main-slide(title, content)
@@ -197,11 +197,11 @@ html(lang='es')
                 .body-comunity
                     #comunity-slider.swiper-container
                         .swiper-wrapper
-                            each val in [1, 2, 3, 4, 5]
+                            each val in ['“Dolor sit amet, consectetur adipisc elit, sed do eiusmod tempor dunt ut labore et dolore magna aliqua.', 'La experiencia adquirida al trabajar con un equipo que cruzan ideas para la innovación han sido de mucha suma para acelerar el camino hacia visión de la empresa que somos', '“Dolor sit amet, consectetur adipisc elit, sed do', '“Dolor sit amet, consectetur adipisc elit', '“Dolor sit amet, consectetur adipisc elit, sed do eiusmod tempor dunt ut labore et ']
                                 .swiper-slide
                                     .swiper-comunity-bg(style="background-image: url('images/comunity1.jpg')")
                                     .slider-comunity-content
-                                        p “Dolor sit amet, consectetur adipisc elit, sed do eiusmod tempor dunt ut labore et dolore magna aliqua.
+                                        p= val
                                         h3 LOREM IPSUM
                 .swiper-button-next.swiper-button-black.d-none.d-md-block
                 .swiper-button-prev.swiper-button-black.d-none.d-md-block

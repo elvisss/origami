@@ -86,12 +86,10 @@
 					font-family: $font-family-antonio-bold;
 					color: $oc-black;
 				}
-				a {
-					&.date {
-						color: $oc-black;
-						font-size: 12px;
-						font-family: $font-family-antonio-light;
-					}
+				.date {
+					color: $oc-black;
+					font-size: 12px;
+					font-family: $font-family-antonio-light;
 				}
 			}
 		}

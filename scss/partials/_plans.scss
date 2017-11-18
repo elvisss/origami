@@ -168,10 +168,13 @@
 						background-size: cover;
 						background-position: top center;
 						position: absolute;
-						top: 5px;
+						top: 2px;
 						left: -25px;
 						width: 14px;
 						height: 11px;
+						@include media-breakpoint-up(md) {
+							top: 5px;
+						}
 					}
 				}
 			}
