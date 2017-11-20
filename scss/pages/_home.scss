@@ -9,15 +9,17 @@
     .main-banner-bg {
         height: 100%;
         position: relative;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        @include media-breakpoint-down(sm) {
+            background-image: none !important;
+        }
+        @include media-breakpoint-up(md) {
+
+        }
         img {
             width: 100%;
-            @include media-breakpoint-up(md) {
-                position: absolute;
-                height: 100%;
-                left: 50%;
-                width: auto;
-                @include transform(translateX(-50%));
-            }
         }
     }
     .main-banner-content {

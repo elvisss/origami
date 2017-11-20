@@ -3,9 +3,9 @@
 		padding-left: 45px;
 	}
 	.aside-block {
-		margin: 20px 0;
-		&:first-child {
-			margin-top: 0;
+		padding-bottom: 20px;
+		.aside-widget {
+			margin-top: 20px;
 		}
 	}
 }
