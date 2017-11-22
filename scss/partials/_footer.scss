@@ -11,6 +11,7 @@
 			margin-top: 15px;
 			background-position: left center;
 			background-repeat: no-repeat;
+			background-size: 42px 47px;
 			&:first-child {
 				margin-top: 0;
 			}
@@ -19,16 +20,16 @@
 			}
 			&.info- {
 				&#{address} {
-					background-image: url('../images/address.png');
+					background-image: url('../images/direccion.svg');
 				}
 				&#{phone} {
-					background-image: url('../images/phone.png');
+					background-image: url('../images/celular.svg');
 				}
 				&#{mail} {
-					background-image: url('../images/mail.png');
+					background-image: url('../images/e-mail.svg');
 				}
 				&#{web} {
-					background-image: url('../images/chrono.png');
+					background-image: url('../images/web.svg');
 				}
 			}
 			p, a {
