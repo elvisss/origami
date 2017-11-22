@@ -1,10 +1,8 @@
 #services-section {
 	position: relative;
 	height: 250px;
-	margin-top: 60px;
 	@include media-breakpoint-up(md) {
 		height: 100%;
-		margin: 0;
 	}
 	.wrap-services {
 		position: absolute;

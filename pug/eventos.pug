@@ -13,10 +13,8 @@ html(lang='es')
                                 .swiper-wrapper
                                     each val in ['./images/evento_horizontal.png', './images/conciertos-lima1.jpg', './images/evento5.jpg', './images/feature-1.jpg', './images/evento4.jpg']
                                         .swiper-slide
-                                            figure.feature-bg
-                                                picture
-                                                    source(srcset=val, media="(min-width: 768px)")
-                                                    img(srcset="./images/evento_vertical.jpg")
+                                            figure.feature-bg(style="background-image: url(" + val + ")")
+                                                img.d-md-none(src="./images/decora-portrait.jpg")
                                             .feature-links
                                                 .wrap-feature-links
                                                     a.btn.btn-main.js-set-evento(href="#", data-event-name="val", data-event-date="val + 1", data-toggle="modal", data-target='.me-apunto') Me apunto

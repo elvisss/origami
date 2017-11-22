@@ -155,9 +155,10 @@ select {
     -moz-appearance: none;
     -ms-appearance: none;
     appearance: none;
-    background-image: url('../images/select-arrow.png');
+    background-image: url('../images/arrow-down.svg');
     background-repeat: no-repeat;
     background-position: right center;
+    background-size: 33px;
     color: white;
     &:focus {
       color: white;

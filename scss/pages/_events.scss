@@ -33,25 +33,28 @@
 			.feature-bg {
 				height: auto;
 				background-repeat: no-repeat;
-				background-position: top left;
+				background-position: left center;
 				background-size: cover;
 				position: relative;
 				margin: 0;
 				@include media-breakpoint-up(md) {
 					height: 100%;
 				}
+				@include media-breakpoint-down(sm) {
+					background-image: none !important;
+				}
 				img {
 					width: 100%;
 				}
-				&:after {
-					position: absolute;
-					left: 0;
-					right: 0;
-					top: 0;
-					bottom: 0;
-					background-color: rgba(0,0,0,.2);
-					content: "";
-				}
+				// &:after {
+				// 	position: absolute;
+				// 	left: 0;
+				// 	right: 0;
+				// 	top: 0;
+				// 	bottom: 0;
+				// 	background-color: rgba(0,0,0,.2);
+				// 	content: "";
+				// }
 			}
 			.feature-links {
 				text-align: center;
