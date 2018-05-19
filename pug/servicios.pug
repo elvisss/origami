@@ -47,9 +47,6 @@ html(lang='es')
                             each val, index in benefits
                                 if val.main == true
                                     +benefit(val.url, val.text, val.main)(class="main-benefit")
-                                else if index == 12
-                                    +benefit(val.url, val.text)
-                                        .col.box-benefit &nbsp;
                                 else
                                     +benefit(val.url, val.text)
 

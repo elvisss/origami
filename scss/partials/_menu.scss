@@ -81,6 +81,8 @@ ul {
 				border-radius: 50%;
 				img, svg {
 					display: block;
+					width: 40px;
+					height: 40px;
 					.fill-social {
 						@include transition(.5s);
 						fill: $oc-yellow;
